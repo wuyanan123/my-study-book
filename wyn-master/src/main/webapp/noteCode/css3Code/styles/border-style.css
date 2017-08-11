@@ -1,0 +1,80 @@
+/* 背景边框相关属性设置 样式 练习内容子模块的 公共样式 */
+.border-style-index .background-test-content{
+    border:15px dotted mediumseagreen;
+    padding:15px;
+    height:40px;
+    color:white;
+    line-height: 40px;
+    font-weight: bolder;
+    font-size: larger;
+    text-align: center;
+}
+.border-style-index .test-content-no-border{
+    color:white;
+    font-weight: bolder;
+    font-size: larger;
+    text-align: center;
+}
+/* 和基本类型样式设置 */
+.border-style-index .show-space{
+
+}
+.border-style-index .show-space .content-space{
+    border: 1px solid silver;
+    height:300px;
+}
+.border-style-index .show-space .content-space .main-space{
+    display: flex;
+    height:240px;
+}
+.border-style-index .show-space .content-space .main-space .left-space{
+    width:40%;
+    height:100%;
+    border:1px solid silver;
+    margin-right: 2px;
+}
+
+
+.border-style-index .show-space .content-space .main-space .right-space{
+    width:60%;
+    height:100%;
+    border:1px solid silver;
+}
+.border-style-index .show-space .content-space .main-space .right-space .one-test span{
+    display:inline-block;
+    border:1px solid red;
+    width:100px;
+    height:30px;
+}
+.border-style-index .show-space .content-space .main-space .right-space .one-test p{
+    display:inline-block;
+    overflow: hidden;
+    border:1px solid darkgreen;
+    width:100px;
+    height:30px;
+}
+/* 变形练习 内容快的样式 设置 */
+.border-style-index .show-space .content-space .main-space .right-space .test{
+    width:100%;
+    height:100%;
+}
+.border-style-index .test-content-space{
+    position:relative;
+    border:2px solid goldenrod;
+    width:90%;
+    height:70%;
+    margin: 2px 35px;
+}
+.border-style-index .test-content{
+    border:2px solid silver;
+    width:20%;
+    height:60%;
+    position: absolute;
+    left:10px;
+    top:20px;
+}
+
+/* 圆角边框练习 */
+.border-style-index .one-test div:nth-child(1) {
+    border-radius: 5px 5px 5px 7px/10px;
+}

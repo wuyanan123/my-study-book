@@ -1,0 +1,27 @@
+.three-d-transform .test-content-space{
+    position:relative;
+    border:2px solid goldenrod;
+    width:90%;
+    height:70%;
+    margin: 2px 35px;
+    -webkit-transform-style: preserve-3d;
+}
+
+/* 设置3d效果图  样式设置 */
+.three-d-transform .three-d-img{
+    width:150px;
+    height:150px;
+    background-image: url(../img/transform/3d_axes.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*.three-d-transform .content-footer{*/
+    /*position:relative;*/
+    /*width:100%;*/
+    /*z-index:5;*/
+    /*left:0;*/
+    /*bottom:0;*/
+    /*background-color: #EEF5FA;*/
+    /*height:42px;*/
+    /*line-height: 40px;*/
+/*}*/

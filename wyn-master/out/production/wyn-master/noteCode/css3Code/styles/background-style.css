@@ -1,0 +1,129 @@
+/* 背景图像相关属性设置 样式 练习内容子模块的 公共样式 */
+.background-test-content{
+    border:15px dotted mediumseagreen;
+    padding:15px;
+    height:40px;
+    color:white;
+    line-height: 40px;
+    font-weight: bolder;
+    font-size: larger;
+    text-align: center;
+}
+.test-content-no-border{
+    color:white;
+    height:40px;
+    line-height: 40px;
+    font-weight: bolder;
+    font-size: larger;
+    text-align: center;
+}
+
+/* 背景显示范围 样式 */
+.background-style .one-test div{
+    border:5px dotted orchid;
+    padding:5px;
+}
+.background-style .one-test div:nth-of-type(1){
+    background-color: #00B83F;
+}
+.background-style .one-test div:nth-of-type(2){
+    background-color: #00B83F;
+    background-clip:padding-box;
+}
+.background-style .one-test div:nth-of-type(3){
+    background-color: #00B83F;
+    background-clip:border-box;
+}
+/* 背景图像 绘制起点 样式 */
+.background-style .two-test div:nth-of-type(1){
+    background-image:url(../img/backgroundStyle/b.png);
+    background-size:cover;
+}
+.background-style .two-test div:nth-of-type(2){
+    background-image:url(../img/backgroundStyle/b.png);
+    background-origin:border-box;
+    background-size: cover;
+}
+.background-style .two-test div:nth-of-type(3){
+    background-image:url(../img/backgroundStyle/b.png);
+    -webkit-background-origin:padding-box;
+    background-size: cover;
+}
+.background-style .two-test div:nth-of-type(4){
+    background-image:url(../img/backgroundStyle/b.png);
+    background-origin:content-box;
+    background-size: cover;
+}
+/*  指定背景图像的 尺寸 */
+.background-style .three-test div:nth-of-type(1){
+    background-image:url(../img/backgroundStyle/b.png);
+}
+.background-style .three-test div:nth-of-type(2){
+    background-image:url(../img/backgroundStyle/b.png);
+    background-size: 130px 50px;
+}
+.background-style .three-test div:nth-of-type(3){
+    background-image:url(../img/backgroundStyle/b.png);
+    background-size: contain;
+}
+.background-style .three-test div:nth-of-type(4){
+    background-image:url(../img/backgroundStyle/b.png);
+    background-size: cover;
+}
+/*  新增用于平铺背景图像的选项 样式 */
+.background-style .four-test div{
+    background-size: 70px 30px;
+}
+.background-style .four-test div:nth-of-type(1){
+    background-image:url(../img/backgroundStyle/b.png);
+}
+.background-style .four-test div:nth-of-type(2){
+    background-image:url(../img/backgroundStyle/b.png);
+    background-repeat:no-repeat;
+}
+.background-style .four-test div:nth-of-type(3){
+    background-image:url(../img/backgroundStyle/b.png);
+    background-repeat:space;
+}
+.background-style .four-test div:nth-of-type(4) {
+    background-image: url(../img/backgroundStyle/b.png);
+    background-repeat: round;
+}
+
+
+/* 线性渐变样式  设置*/
+.background-color-style .one-test div{
+    width:350px;
+}
+.background-color-style .one-test div:nth-of-type(1){
+    background: linear-gradient(to bottom right,#ccc 0%,orchid 50%,black);
+}
+.background-color-style .one-test div:nth-of-type(2){
+    background: linear-gradient(to bottom,slategray 0%,blueviolet 20%,orange 50%,yellowgreen 75%,black);
+}
+.background-color-style .one-test div:nth-of-type(3){
+    background: linear-gradient(0deg,white 0%,orchid 50%,black);
+}
+.background-color-style .one-test div:nth-of-type(4){
+    background: linear-gradient(40deg,white 0%,orchid 50%,black);
+}
+
+/* 放射性渐变 样式 */
+.background-color-style .left-space .left-space-width{
+    width:60%;
+}
+.background-color-style .right-space .right-space-width{
+    width:40%;
+}
+.background-color-style .two-test div:nth-of-type(1){
+    background: radial-gradient(circle 60px at center center,green,orange 30%,red 70%,black);
+}
+.background-color-style .two-test div:nth-of-type(2){
+    background: radial-gradient(ellipse 80px 50px at 80px 40px,green,orange 30%,red 70%,black);
+}
+.background-color-style .two-test div:nth-of-type(3){
+    background: radial-gradient(ellipse 40px 30px at 80px 40px,green,red 50%,black);
+}
+.background-color-style .two-test div:nth-of-type(4){
+    background: radial-gradient(circle 40px at 70px 40px,red,orange 60%,black);
+}

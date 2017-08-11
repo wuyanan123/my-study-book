@@ -1,0 +1,55 @@
+
+/* 盒中容纳不下的内容显示样式设置 */
+.box-style-index .two-test > p,.box-style-index .two-test > div{
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 10px;
+    width:150px;
+    height:95px;
+    border: 2px solid salmon;
+}
+
+.box-style-index .two-test p:nth-of-type(1){
+    overflow: hidden;
+}
+.box-style-index .two-test p:nth-of-type(2){
+    overflow:auto;
+}
+.box-style-index .two-test p:nth-of-type(3){
+    overflow:scroll;
+}
+.box-style-index.two-test p:nth-of-type(4){
+    overflow-x:hidden;
+    overflow-y:scroll;
+}
+.box-style-index .two-test .text-overflow p{
+    overflow:hidden;
+    white-space:nowrap;  /* 不允许超出内容换行 */
+    text-overflow:ellipsis;
+}
+
+/* 对盒使用阴影样式设置 */
+.box-style-index .three-test div:nth-of-type(1){
+    box-shadow:10px 10px 5px orange;
+}
+.box-style-index.three-test div:nth-of-type(2){
+    box-shadow:0px 0px 30px black;
+}
+.box-style-index .three-test div:nth-of-type(3){
+    box-shadow:inset 0px 0px 30px orange;
+}
+
+/* 指定针对元素的宽度和高度的计算方法 样式*/
+.box-style-index .four-test div:nth-of-type(1){
+    width:200px;
+    height:110px;
+    border:20px solid slategray;
+    padding: 10px;
+}
+.box-style-index .four-test div:nth-of-type(2){
+    width:200px;
+    height:110px;
+    border:20px solid slategray;
+    padding: 10px;
+    box-sizing:border-box;
+}

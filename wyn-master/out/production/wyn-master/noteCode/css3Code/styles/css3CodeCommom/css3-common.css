@@ -1,0 +1,148 @@
+/* 公共样式设置 */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    /*overflow: auto;*/
+    border: 2px solid silver;
+}
+ol{
+    padding-left: 40px;
+}
+h1{
+    vertical-align: middle;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+h2{
+    padding-left: 20px;
+    background-color: #0000FF;
+    color: white;
+    padding:5px 20px;
+}
+h3{
+    padding-left: 10px;
+    border-bottom: 1px dotted silver ;
+    background-color: #9fbbb4;
+    pdding:5px 10px;
+}
+h3:before{
+    content:"& ";
+}
+
+aside{
+    border-bottom: 1px solid silver;
+    height:30px;
+    line-height: 30px;
+}
+
+/* 垂直滚动条设置 */
+.content-scroll{
+    height:90%;
+    overflow:hidden;
+    overflow-y:scroll;
+    overflow-x: hidden;
+    word-break:break-all;
+}
+/* 重要内容设置样式 */
+.importance-content{
+    font-weight: bolder;
+    color:firebrick;
+    font-style:oblique;  /* 倾斜体 */
+    word-break:break-all; /* 允许在单词内部换行 */
+}
+
+/* 练习模块 的 子模块 样式 */
+.test-child-content{
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 10px;
+    width:150px;
+    height:95px;
+    border: 2px solid salmon;
+}
+
+/* 盒基本类型样式设置  公共样式*/
+.show-space{
+
+}
+.show-space .show-content-space{
+    height:420px;
+    overflow: hidden;
+    overflow-y:auto;
+}
+.show-space .content-space{
+    border: 1px solid silver;
+    height:300px;
+}
+.show-space .content-space .main-space{
+    display: flex;
+    height:240px;
+}
+.show-space .content-space .main-space .left-space{
+    width:40%;
+    height:100%;
+    border:1px solid silver;
+    margin-right: 2px;
+    overflow: hidden;
+    overflow-y:auto;
+}
+.show-space .content-space .main-space .right-space{
+    width:60%;
+    height:100%;
+    border:1px solid silver;
+    overflow: hidden;
+    overflow-y:auto;
+}
+.show-space .content-space .main-space .right-space .one-test span{
+    display:inline-block;
+    border:1px solid red;
+    width:100px;
+    height:30px;
+}
+.show-space .content-space .main-space .right-space .one-test p{
+    display:inline-block;
+    overflow: hidden;
+    border:1px solid darkgreen;
+    width:100px;
+    height:30px;
+}
+/*  2d / 3d 变心处理 公共样式 */
+/* 2d/3d变形处理 按钮覆盖my-common样式 */
+.content-footer-relative{
+    position:relative;
+    width:100%;
+    z-index:5;
+    left:0;
+    bottom:0;
+    background-color: #EEF5FA;
+    height:42px;
+    line-height: 40px;
+}
+.show-space .content-space .main-space .right-space .test{
+    width:100%;
+    height:100%;
+}
+.transform-index .test-content-space{
+    position:relative;
+    border:2px solid goldenrod;
+    width:90%;
+    height:70%;
+    margin: 2px 35px;
+}
+.transform-index .test-content{
+    border:2px solid silver;
+    width:20%;
+    height:60%;
+    position: absolute;
+    left:10px;
+    top:20px;
+}
+#translate{
+    z-index: 100;
+}
+

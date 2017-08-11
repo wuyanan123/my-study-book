@@ -1,0 +1,74 @@
+/**
+ * Created by wuyanan on 2017/7/24.
+ */
+var css3App = angular.module("css3App",["ngRoute"]);
+css3App.config(["$routeProvider",function($routeProvider){
+    $routeProvider.when("/",{
+        templateUrl:"code/xia-la-menu.html",
+        controller:"xiaLaMenuController"
+    }).when('/css0',{
+        templateUrl:"code/xia-la-menu.html",
+        controller:"xiaLaMenuController"
+    }).when('/css1',{
+        templateUrl:"code/xuan-ze-qi.html",
+        controller:""
+    }).when('/css2',{
+        templateUrl:"code/box-style.html",
+        controller:""
+    }).when('/css3',{
+        templateUrl:"code/background-style.html",
+        controller:""
+    }).when('/css4',{
+        templateUrl:"code/background-color-style.html",
+        controller:""
+    }).when('/css5',{
+        templateUrl:"code/border-style.html",
+        controller:""
+    }).when('/css6',{
+        templateUrl:"code/2d-transform.html",
+        controller:"transformController"
+    }).when('/css7',{
+        templateUrl:"code/3d-transform.html",
+        controller:"3dTransformController"
+    }).when('/css8',{
+        templateUrl:"code/3d-transform-test.html",
+        controller:"3dTransformTestController"
+    }).when('/css9',{
+        templateUrl:"code/transition-and-animations.html",
+        controller:"transitionController"
+    }).when('/css10',{
+        templateUrl:"code/column-layout.html",
+        controller:""
+    }).when('/css11',{
+        templateUrl:"code/flex-index.html",
+        controller:""
+    }).when('/css12',{
+        templateUrl:"code/flex-test.html",
+        controller:""
+    }).when('/css13',{
+        templateUrl:"code/media-index.html",
+        controller:""
+    })
+}]);
+
+css3App.factory("css3MenuFactory",function(){
+    var menuList = [
+        {menuName:"003-css特效下拉菜单",routeName:"0"},
+        {menuName:"004-css3选择器",routeName:"1"},
+        {menuName:"005-css3盒相关样式",routeName:"2"},
+        {menuName:"006-css3背景相关样式",routeName:"3"},
+        {menuName:"007-css3渐变色背景",routeName:"4"},
+        {menuName:"008-css3边框相关样式",routeName:"5"},
+        {menuName:"009-css3处理变形--2D变形",routeName:"6"},
+        {menuName:"010-css3处理变形--3D变形",routeName:"7"},
+        {menuName:"011-css3-3D变形练习",routeName:"8"},
+        {menuName:"012-css3动画处理",routeName:"9"},
+        {menuName:"013-css3页面布局--多栏布局",routeName:"10"},
+        {menuName:"014-css3页面布局--弹性盒布局",routeName:"11"},
+        {menuName:"015-弹性盒布局练习",routeName:"12"},
+        {menuName:"016--多媒体查询(@media)用法介绍",routeName:"13"},
+    ];
+    return {
+        menuList:menuList
+    }
+});

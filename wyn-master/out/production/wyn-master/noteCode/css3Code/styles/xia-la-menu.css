@@ -1,0 +1,92 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+
+.select-nav-index{
+    height:100%;
+    background-image: url("../img/1a.jpg");
+    background-size: cover; /* 图像平铺 */
+}
+.select-nav-index .add{
+    padding:20px 5px;
+    color:gold;
+}
+.select-nav-index input[type='text']{
+    width:150px;
+}
+.select-nav-index .nav{
+    width:80%;
+    height:45px;
+    margin: 150px auto 0;
+    border: 1px solid #fff;
+    background: -webkit-linear-gradient(bottom,orchid,#fff);
+}
+.select-nav-index nav > ul{
+    display: flex;
+    display: -webkit-flex;
+}
+.select-nav-index nav > ul > li{
+    list-style: none;
+    -webkit-flex: 3;
+    line-height: 45px;
+    text-align: center;
+}
+.select-nav-index nav>ul>li>a{
+    text-decoration: none;
+    color: #333333;
+}
+.select-nav-index .sub-nav{
+    width:100%;
+    -webkit-perspective:600px;
+}
+.select-nav-index .sub-nav li{
+    width:60%;
+    list-style:none;
+    border: 1px solid #fff;
+    text-decoration:none;
+    margin: 1px auto;
+    opacity: 0;
+    -webkit-transform:rotateY(180deg);
+    -webkit-transition:all 1s;
+}
+.select-nav-index .sub-nav li a{
+    color:#fff;
+}
+
+.select-nav-index .sub-nav li:hover{
+    cursor:pointer;
+    -webkit-box-shadow:0px 0 20px #fff;
+    font-weight: bolder;
+    color:darkorange;
+}
+
+.select-nav-index nav > ul > li:hover .sub-nav li{
+    opacity:1;
+    -webkit-transform:rotateY(0deg);
+}
+
+.select-nav-index .sub-nav li:nth-of-type(1){
+    -webkit-transition-delay:100ms;
+}
+.select-nav-index .sub-nav li:nth-of-type(1){
+    -webkit-transition-delay:50ms;
+}
+.select-nav-index .sub-nav li:nth-of-type(1){
+    -webkit-transition-delay:0ms;
+}
+
+.select-nav-index nav > ul > li:hover .sub-nav li:nth-of-type(1){
+    -webkit-transition-delay:0ms;
+}
+.select-nav-index nav > ul > li:hover .sub-nav li:nth-of-type(2){
+    -webkit-transition-delay:50ms;
+}
+.select-nav-index nav > ul > li:hover .sub-nav li:nth-of-type(3){
+    -webkit-transition-delay:100ms;
+}
+.select-nav-index nav > ul > li:hover .sub-nav li:nth-of-type(4){
+    -webkit-transition-delay:150ms;
+}
+

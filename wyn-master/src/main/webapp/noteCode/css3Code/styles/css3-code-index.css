@@ -1,0 +1,12 @@
+/*布局*/
+.main-content{
+    heihgt:98%;
+}
+.main-content .main-left{
+    heihgt:97%;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.main-content .main-right{
+    heihgt:97%;
+}

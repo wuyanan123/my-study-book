@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="baseFrameworkApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../common/styles/my-common.css">
+    <link rel="stylesheet" href="style/base-framework.css">
+</head>
+<body ng-controller="baseFrameworkController">
+    <section class="base-framework-index">
+        <header class="base-framework-head" id="baseFrameworkheader">
+            <div class="base-framework-top">
+                <div class="framework-left">
+                    <span>当前页面--</span>
+                    <span>{{currentFrame.frameName}}</span>
+                </div>
+                <div class="framework-right">
+                    <span>用户：{{users.userName}}</span><span></span>
+                </div>
+            </div>
+            <div class="base-framework-bottom">
+                <ul class="main-menu">
+                    <!-- 一级菜单 -->
+                    <li class="menu-li-title" ng-repeat="mainMenu in menuLists">
+                        <a>{{mainMenu.menuName}}</a>
+                        <ul class="sub-menu">
+                            <!-- 二级菜单 -->
+                            <li ng-repeat="subMenu in mainMenu.subMenuList">
+                                <a ng-click="intoMenuHtml(subMenu)">
+                                    {{subMenu.subMenuName}}
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <section ng-style="framesSpaceHeight()" class="base-frame-space">
+            <iframe ng-repeat="frame in allFrames" class="framework-iframe"
+                    ng-src="{{frame.frameUrl}}" ng-style="frameStyle(frame)" frameborder="0">
+            </iframe>
+        </section>
+    </section>
+
+<script src="../common/javascript/jquery.js"></script>
+<script src="../common/javascript/angular.js"></script>
+<script src="../common/javascript/angular-route.js"></script>
+<script src="../common/javascript/utils/heren-ui.js"></script>
+<script src="javascript/base-framework-app.js"></script>
+<script src="javascript/controller/base-framework-controller.js"></script>
+</body>
+</html>

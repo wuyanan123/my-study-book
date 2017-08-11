@@ -1,0 +1,124 @@
+
+/*ol{*/
+    /*padding-left: 42px;*/
+    /*margin: 5px;*/
+/*}*/
+/*body{*/
+    /*border:2px solid slategray;*/
+    /*overflow: hidden;*/
+/*}*/
+
+
+.flex-index .attr-style{
+    display:inline-block;
+    font-weight: bolder;
+    font-size: larger;
+    color:#9f00a7;
+}
+
+.flex-index .scroll-style{
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.flex-index .content-title{
+    padding-left: 20px;
+    background-color: #0000FF;
+    height:40px;
+    line-height:40px;
+    color: white;
+}
+h3{
+    padding-left: 10px;
+    border-bottom: 1px dotted silver ;
+    background-color: #9fbbb4;
+}
+h3:before{
+    content:"& ";
+}
+
+.flex-index .show-space{
+    height:100%;
+    overflow: hidden;
+}
+.flex-index .title-style{
+    background: linear-gradient(to bottom ,saddlebrown,black);
+    color:white;
+    height:50px;
+    line-height:50px;
+    font-size: larger;
+    font-weight:bolder;
+    text-align: center;
+}
+.flex-index .show-content{
+    box-sizing:border-box;
+    /*border: 2px solid orchid;*/
+    height:410px;
+}
+
+.flex-index .main-content{
+    /*box-sizing: border-box;*/
+    width:100%;
+    /*border:3px solid green;*/
+    height:370px;
+    display:inline-flex;
+}
+.flex-index .left-content{
+    flex: 1;
+    height:370px;
+    border: 2px solid silver;
+    margin-right: 4px;
+}
+.flex-index .right-content{
+    flex: 1;
+    height:370px;
+    border: 2px solid silver;
+}
+.flex-index .test-space{
+    box-sizing: border-box;
+    height:346px;
+    padding: 2px;
+}
+.flex-index .test-space .text-font{
+    font-weight: bolder;
+    font-size: 1.1em;
+}
+
+
+/* 弹性盒布局练习样式 */
+.flex-test-index .main-space{
+    display:flex;
+    flex-direction:row; /* 控制布局方向 */
+    /*flex-wrap:wrap;    !* 控制是否换行 *!*/
+    justify-content: flex-start; /* 控制空白部分的显示 */
+    align-items:flex-start;  /* 控制子元素的对齐方式 */
+    align-content: flex-start; /* 控制换行时  每一行的对齐方式 */
+    border:2px solid silver;
+    height:calc(90% - 50px); /* 数值类型计算的方法 */
+}
+.flex-test-index .one-space{
+    order:1;  /* 按顺序控制元素显示顺序，未设置该属性的排前面 */
+    /*flex:1;   !* 设置子元素的宽度或高度*/
+    /*flex-grow:3;   !* 设置子元素的宽度或高度 (子元素宽度或者高度总和小于容器元素时 使用)*/
+    flex-shrink:2;  /* 设置子元素的宽度或高度(子元素宽度总和大于容器元素宽度时) */
+    border:1px solid olive;
+    margin: 5px;
+    width:50%;
+    height:40%;
+    overflow: auto;
+}
+.flex-test-index .two-space{
+    border:1px solid olive;
+    margin: 5px;
+    width:50%;
+    height:35%;
+    overflow: auto;
+}
+.flex-test-index .three-space{
+    order:2;
+    width:50%;
+    height:40%;
+    border:1px solid olive;
+    margin: 5px;
+    overflow: auto;
+}

@@ -1,0 +1,24 @@
+
+.media-index .main{
+    display: flex;
+    height:1em;
+    height:419px;
+    overflow: hidden;
+}
+.media-index .main .main-left{
+    flex:1;
+    border: 2px solid silver;
+    margin: 2px 3px 0px 3px;
+    height:419px;
+}
+.media-index .main .main-right{
+    flex:4;
+    border: 2px solid silver;
+    margin: 2px 3px 0px 3px;
+    height:419px;
+}
+.media-index .main .media-main-content{
+    height:386px;
+    overflow: hidden;
+    overflow-y: auto;
+}

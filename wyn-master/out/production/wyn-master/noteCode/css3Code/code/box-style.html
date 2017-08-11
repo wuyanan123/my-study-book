@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒相关样式</title>
+</head>
+<body>
+<section class="box-style-index show-space">
+    <header>
+        <h1>盒相关样式</h1>
+    </header>
+    <div class="show-content-space">
+        <section class="content-space">
+            <header>
+                <h2>盒的基本类型</h2>
+                <aside>
+                    使用说明：display:inline-block;
+                </aside>
+            </header>
+            <div class="main-space">
+                <section class="left-space">
+                    <header>
+                        <h3>盒基本类型:</h3>
+                    </header>
+                    <div>
+                        <ol>
+                            <li>block：块类型(例如div,p等元素)</li>
+                            <li>inline：行类型(例如a,span等元素)</li>
+                            <li>inline-block：属于block类型盒的一种，但是在显示时具有inline类型的特点。
+                                <span class="importance-content">
+                                    也就是说只要将元素(无论该元素是block还是inline类型)的display：设置为
+                                inline-block类型，该元素同时具备inline类型与block类型的特征。
+                                </span>
+                            </li>
+                            <li>inline-table</li>
+                            <li>list-item：将多个元素作为列表来显示</li>
+                            <li>run-in</li>
+                            <li>compact</li>
+                        </ol>
+                    </div>
+                </section>
+                <section class="right-space">
+                    <header>
+                        <h3>盒基本类型练习:</h3>
+                    </header>
+                    <div class="one-test">
+                        <span>d刷卡机水电费</span>
+                        <span>和第三方回家</span>
+                        <p>恢复电视剧放寒假的说法</p>
+                        <p>fdshlkfl負擔和實際發貨</p>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section class="content-space">
+            <header>
+                <h2>对盒中容纳不下的内容的显示</h2>
+                <aside>
+                    使用说明：overflow:hidden/auto/scroll
+                </aside>
+            </header>
+            <div class="main-space">
+                <section class="left-space">
+                    <header>
+                        <h3>属性值说明:</h3>
+                    </header>
+                    <div>
+                        <ol>
+                            <li>hidden：超出内容被隐藏</li>
+                            <li>auto：内容超出时，根据需要 出现水平 "或者" 垂直方向的滚动条</li>
+                            <li>auto：内容超出时，出现固定的水平 和 垂直方向的滚动条</li>
+                        </ol>
+                    </div>
+                    <header>
+                        <h3>text-overflow属性:</h3>
+                    </header>
+                    <aside>
+                        使用说明：<br>当overflow 设置为hidden，并且通过 white-space:nowrap,设置右端内容不换行时，
+                        将text-overflow:ellipsis 超出的内容会以 "....."省略号代替。
+                    </aside>
+                </section>
+                <section class="right-space">
+                    <header>
+                        <h3>盒内容超出范围显示练习:</h3>
+                    </header>
+                    <div class="two-test">
+                        <p>
+                            <span class="importance-content">hidden</span>：恢复电视剧放寒假的说法，打飞机可首付款。fdshj都是废话，
+                            的书法家离开的说法，是对方即可上岛咖啡看见说多了几分是的覅及了。
+                        </p>
+                        <p>
+                            <span class="importance-content">auto</span>：发神经，sdfhdsjsdjfh回家是的負擔和實際發貨，的话交收费
+                            的书法家离开的说法，是对方即可上岛咖啡看见说多了几分是的覅及了。
+                        </p>
+                        <p>
+                            <span class="importance-content">scroll</span>：发神经，sdfhdsjsdjfh回家是的負擔和實際發貨，第三方回家，
+                            的书法家离开的说法，是对方即可上岛咖啡看见说多了几分是的覅及了。
+                        </p>
+                        <p>
+                            <span class="importance-content">overflow:hidden;overflow-x / overflow-y</span>：发神经，sdfhdsjsdjfh回家是的負擔和實際發貨，的话交收费
+                            的书法家离开的说法，是对方即可上岛咖啡看见说多了几分是的覅及了。
+                        </p>
+
+                        <div class="text-overflow">
+                            <span class="importance-content">text-overflow:ellipsis</span>：
+                            <p>
+                                发神经，sdfhdsjsdjfh回家是的負擔和實際發貨，的话交收费
+                                的书法家离开的说法，是对方即可上岛咖啡看见说多了几分是的覅及了。
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section class="content-space">
+            <header>
+                <h2>对盒使用阴影</h2>
+                <aside>
+                    使用说明：box-shadow:length1 length2 length3 color;
+                </aside>
+            </header>
+            <div class="main-space">
+                <section class="left-space">
+                    <header>
+                        <h3>属性值说明:</h3>
+                    </header>
+                    <div>
+                        <ol>
+                            <li>length1：x轴方向偏移距离(负值向左偏移)</li>
+                            <li>length2：y轴方向偏移距离(负值向上偏移)</li>
+                            <li>length3：阴影模糊半径</li>
+                            <li>color：阴影颜色</li>
+                            <span class="importance-content">例如：box-shadow:10px 10px 5px orange;</span>
+                            <li>
+                                inset关键字：创建盒内阴影<br>
+                                <span class="importance-content">
+                                    例如：box-shadow:inset 0px 0px 30px orange;
+                                </span>
+                            </li>
+                        </ol>
+                    </div>
+                </section>
+                <section class="right-space">
+                    <header>
+                        <h3>对盒使用阴影练习:</h3>
+                    </header>
+                    <div class="three-test">
+                        <div class="test-child-content">
+                            <p>
+                                电话费卡戴珊华东师范涸鲋得水
+                            </p>
+                        </div>
+                        <div class="test-child-content">
+                            <p>
+                                电话费卡戴珊华东师范涸鲋得水
+                            </p>
+                        </div>
+                        <div class="test-child-content">
+                            <p>
+                                电话费卡戴珊华东师范涸鲋得水
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section class="content-space">
+            <header>
+                <h2>指定针对元素的宽度和高度计算方法</h2>
+                <aside>
+                    使用说明：box-sizing:border-box / content-box(默认);
+                </aside>
+            </header>
+            <div class="main-space">
+                <section class="left-space">
+                    <header>
+                        <h3>属性值说明:</h3>
+                    </header>
+                    <div>
+                        <ol>
+                            <li>border-box：表示元素的宽度和高度包括补白区域(padding)与边框的宽和高</li>
+                            <li>content-box：表示元素的宽度和高度"不"包括补白区域(padding)与边框的宽和高</li>
+                            <span class="importance-content">例如：box-sizing: border-box;</span>
+                        </ol>
+                    </div>
+                </section>
+                <section class="right-space">
+                    <header>
+                        <h3>box-sizing属性练习:</h3>
+                    </header>
+                    <div class="four-test">
+                        <div class="test-child-content">
+                            <p>
+                                电话费卡戴珊华东师范涸鲋得水
+                            </p>
+                        </div>
+                        <div class="test-child-content">
+                            <p>
+                                电话费卡戴珊华东师范涸鲋得水
+                            </p>
+                        </div>
+                        <div class="test-child-content">
+                            <p>
+                                电话费卡戴珊华东师范涸鲋得水
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </div>
+</section>
+</body>
+</html>

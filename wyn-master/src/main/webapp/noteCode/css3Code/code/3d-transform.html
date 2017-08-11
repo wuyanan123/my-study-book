@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="transformApp">
+<head>
+    <meta charset="UTF-8">
+    <title>变形处理</title>
+</head>
+<body ng-controller="3dTransformController">
+<section class="transform-index three-d-transform show-space">
+    <header>
+        <h1>变形处理-->3D变形</h1>
+    </header>
+    <div class="show-content-space">
+        <section class="content-space">
+            <header>
+                <h2>3D相关重要属性</h2>
+                <aside>
+                    属性：perspective,perspective-origin,transform-style:preserve-3d,backface-visibility
+                </aside>
+            </header>
+            <div class="main-space">
+                <section class="left-space">
+                    <header>
+                        <h3>属性值说明:</h3>
+                    </header>
+                    <div class="content-scroll">
+                        <span class="attr-style">perspective:</span> n px;  -->透视，视角
+                        <ol>
+                            <li>
+                                说明：perspective属性的存在与否决定了你所看到的是2次元的还是3次元的，
+                                也就是是2D transform还是3D transform.
+                            </li>
+                            <li>使用方法：两种书写形式，一种用在舞台元素上（动画元素们的共同父辈元素）；
+                                第二种就是用在当前动画元素上，与transform的其他属性写在一起。</li>
+                            <li>例子：舞台元素：.stage{perspective:300px}<br>
+                                当前动画元素：.stage .box{transform:perspective(300px) rotateY(45deg)};
+                            </li>
+                            <li>perspective:n px;设置大小位置 相当于人的眼睛位置 设置translateZ(m px)；
+                                当m 越小于 n 时 则子元素越小(因为离眼睛越远)；当 m 越接近 n 时 子元素
+                                则会撑满整个屏幕； 当 m 大于 n 时 子元素会看不见，因为当眼睛后面了
+                            </li>
+
+                        </ol>
+                    </div>
+                </section>
+                <section class="left-space">
+                    <header>
+                        <h3>属性值说明:</h3>
+                    </header>
+                    <div class="content-scroll">
+                        <span class="attr-style">perspective-origin:</span>
+                        x y ;  --> 设置都是原点(也就是眼睛看是什么位置)
+                        <ol>
+                            <li>x,y：与background-origin 值设置一样</li>
+                        </ol><br>
+
+                        <span class="attr-style">transform-style:</span>preserve-3d \ flat(默认值)
+                        <ol>
+                            <li>preserve-3d: 表示3D透视,子元素将保留其 3D 位置。</li>
+                            <li>默认值flat: 表示平面的,子元素将不保留其 3D 位置。</li>
+                        </ol><br>
+
+                        <span class="attr-style">backface-visibility:</span>
+                        <ol>
+                            <li>在CSS3的3D世界中，默认情况下，我们是可以看到背后的元素</li>
+                            <li>backface-visibility:hidden; 使后面元素不可见</li>
+                        </ol>
+
+                    </div>
+                </section>
+                <section class="right-space">
+                    <header>
+                        <h3>3D变形--移动练习:</h3>
+                    </header>
+                    <div class="test one-test">
+                        <div class="test-content-space">
+                            <div class="test-content">示例文字</div>
+                            <div class="test-content">示例文字</div>
+                        </div>
+                        <div class="content-footer-relative btn-center">
+                            <button class="btn-primary btn" ng-click="translateTestFun('X')">X轴方向移动</button>
+                            <button class="btn-primary btn" ng-click="translateTestFun('Y')">Y轴方向移动</button>
+                            <button class="btn-primary btn" ng-click="translateTestFun()">X、Y轴同时移动</button>
+                            <button class="btn-primary btn" ng-click="translateTestFun('init')">初始化</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section class="content-space">
+            <header>
+                <h2>3D旋转</h2>
+                <aside>
+                    使用说明：transform:rotateX(angle-->角度) rotateY(angle) rotateZ(angle)
+                </aside>
+            </header>
+            <div class="main-space">
+                <section class="left-space">
+                    <header>
+                        <h3>属性值说明:</h3>
+                    </header>
+                    <div class="content-scroll">
+                        <span class="attr-style">3D旋转：</span>
+                        <ol>
+                            <li>
+                                旋转方向--->顺时针方向旋转
+                            </li>
+                            <li class="three-d-img"></li>
+                            <span class="importance-content">
+                                例：transform:rotateX(40deg) rotateZ(140deg);
+                            </span>
+                        </ol>
+                    </div>
+                </section>
+                <section class="right-space">
+                    <header>
+                        <h3>3D变形--旋转练习:</h3>
+                    </header>
+                    <div class="test two-test">
+                        <div class="test-content-space">
+                            <div class="test-content">示例文字</div>
+                            <div id="rotate" class="test-content">示例文字</div>
+                        </div>
+                        <div class="content-footer-relative btn-center">
+                            <button class="btn-primary btn" ng-click="rotateTestFun('x')">绕X轴旋转</button>
+                            <button class="btn-primary btn" ng-click="rotateTestFun('y')">绕Y轴旋转</button>
+                            <button class="btn-primary btn" ng-click="rotateTestFun('z')">绕Z轴旋转</button>
+                            <button class="btn-primary btn" ng-click="rotateTestFun('init')">初始化</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section class="content-space">
+            <header>
+                <h2>3D移动</h2>
+                <aside>
+                    使用说明：transform:translateX(x px) translateY(y px) translateZ(z px);
+                </aside>
+            </header>
+            <div class="main-space">
+                <section class="left-space">
+                    <header>
+                        <h3>属性值说明:</h3>
+                    </header>
+                    <div class="content-scroll">
+                        <span class="attr-style">3D移动：</span>
+                        <ol>
+                            <li>translateX(x px)--->沿X轴移动</li>
+                            <li>translateY(y px)--->沿Y轴移动</li>
+                            <li>translateZ(z px)--->沿Z轴移动</li>
+                            <li class="three-d-img"></li>
+                            <span class="importance-content">
+                                例：transform:translateX(20px) translateY(100px) translateZ(40px);
+                            </span>
+                        </ol>
+                    </div>
+                </section>
+                <section class="right-space">
+                    <header>
+                        <h3>3D变形--移动练习:</h3>
+                    </header>
+                    <div class="test two-test">
+                        <div class="test-content-space">
+                            <div class="test-content">示例文字</div>
+                            <div id="translate" class="test-content">示例文字</div>
+                        </div>
+                        <div class="content-footer-relative btn-center">
+                            <button class="btn-primary btn" ng-click="translateTestFun('X')">绕X轴移动</button>
+                            <button class="btn-primary btn" ng-click="translateTestFun('Y')">绕Y轴移动</button>
+                            <button class="btn-primary btn" ng-click="translateTestFun('Z')">绕Z轴移动</button>
+                            <button class="btn-primary btn" ng-click="translateTestFun('init')">初始化</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section class="content-space">
+            <header>
+                <h2>3D缩放</h2>
+                <aside>
+                    使用说明：transform:scaleX(sX) scaleY(sY) scaleZ(sZ);
+                </aside>
+            </header>
+            <div class="main-space">
+                <section class="left-space">
+                    <header>
+                        <h3>属性值说明:</h3>
+                    </header>
+                    <div class="content-scroll">
+                        <span class="attr-style">3D缩放：</span>
+                        <ol>
+                            <li>
+                                值说明：缩放基数为1，如果其值大于1元素就放大，
+                                反之其值小于1，元素缩小。
+                            </li>
+                            <li>transform:scaleX(sx)-->scaleX(sx)表示在X轴上的缩放大小</li>
+                            <li>transform:scaleY(sy)-->scaleY(sy)</li>
+                            <li>transform:scaleZ(sz)-->表示在Z轴上缩放</li>
+                            <span class="importance-content">例：transform:scaleZ(1.5)</span>
+                        </ol>
+                    </div>
+                </section>
+                <section class="right-space">
+                    <header>
+                        <h3>3D变形--缩放练习:</h3>
+                    </header>
+                    <div class="test three-test">
+                        <div class="test-content-space">
+                            <div class="test-content">示例文字</div>
+                            <div id="scale" class="test-content">示例文字</div>
+                        </div>
+                        <div class="content-footer-relative btn-center">
+                            <button class="btn-primary btn" ng-click="scaleTestFun('x')">scaleX(1.5)</button>
+                            <button class="btn-primary btn" ng-click="scaleTestFun('y')">scaleY(0.5)</button>
+                            <button class="btn-primary btn" ng-click="scaleTestFun('xy')">scaleZ(1.5)</button>
+                            <button class="btn-primary btn" ng-click="scaleTestFun('init')">初始化</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section class="content-space">
+            <header>
+                <h2>3D倾斜</h2>
+                <aside>
+                    使用说明：transform:skew(angle,angle)
+                </aside>
+            </header>
+            <div class="main-space">
+                <section class="left-space">
+                    <header>
+                        <h3>属性值说明:</h3>
+                    </header>
+                    <div class="content-scroll">
+                        <span class="attr-style">3D倾斜：</span>
+                        <ol>
+                            <li>
+                                使用说明：倾斜是二维变形，不能再三维空间倾斜，所以没有skewZ用法
+                            </li>
+                            <li>transform:skewX(angle)-->在X轴上顺时针方向倾斜</li>
+                            <li>transform:skewY(angle)-->在Y轴上顺时针倾斜</li>
+                            <span class="importance-content">
+                                例：transform:skewX(30deg);transform:skewY(20deg)
+                            </span>
+                        </ol>
+                    </div>
+                </section>
+                <section class="right-space">
+                    <header>
+                        <h3>3D倾斜--旋转练习:</h3>
+                    </header>
+                    <div class="test four-test">
+                        <div class="test-content-space">
+                            <div class="test-content">示例文字</div>
+                            <div id="skew" class="test-content">示例文字</div>
+                        </div>
+                        <div class="content-footer-relative btn-center">
+                            <button class="btn-primary btn" ng-click="skewTestFun('x45')">X(45deg)</button>
+                            <button class="btn-primary btn" ng-click="skewTestFun('x60')">X(60deg)</button>
+                            <button class="btn-primary btn" ng-click="skewTestFun('x90')">X(90)</button>
+                            <button class="btn-primary btn" ng-click="skewTestFun('y40')">Y(40deg)</button>
+                            <button class="btn-primary btn" ng-click="skewTestFun('y90')">Y(90)</button>
+                            <button class="btn-primary btn" ng-click="skewTestFun('init')">初始化</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>特效下拉菜单</title>
+</head>
+<body ng-controller="xiaLaMenuController" >
+<section class="select-nav-index">
+    <div class="add">
+        标题：<input type="text" ng-model="nav.titleName">
+        下拉选项1：<input type="text" ng-model="select.contentOne">
+        下拉选项2：<input type="text" ng-model="select.contentTwo">
+        <botton ng-click="addNavFun(nav.titleName,select.contentOne,select.contentTwo)">添加</botton>
+    </div>
+    <div class="nav">
+        <nav>
+            <ul class="">
+                <li ng-repeat="nav in navList">
+                    <a href="">{{nav.title}}</a>
+                    <ul class="sub-nav">
+                        <li ng-repeat="menu in nav.menuList track by $index">
+                            <a href="">{{menu.menuName}}</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</section>
+
+</body>
+</html>

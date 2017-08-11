@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="loginApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../common/styles/my-common.css">
+    <link rel="stylesheet" href="style/login.css">
+</head>
+<body ng-controller="loginController">
+    <section class="login-index">
+        <header class="login-head">
+            <div>登录页面</div>
+        </header>
+        <div class="login-modal">
+            <section class="modal-main">
+                <div class="modal-content">
+                    <div>用 户 名:<input type="text" ng-model="users.userName" placeholder="请输入用户名"/></div>
+                    <div>密 &nbsp; 码:<input type="text" ng-model="users.userPwd" placeholder="请输入密码"/></div>
+                </div>
+                <footer class="modal-footer btn-center">
+                    <button class="btn btn-primary" ng-click="loginFun()">登录</button>
+                    <button class="btn login-btn-cancel">重置</button>
+                </footer>
+            </section>
+        </div>
+        <footer class="login-footer">
+            <p>@发生科技返回</p>
+        </footer>
+    </section>
+
+<script src="../common/javascript/jquery.js"></script>
+<script src="../common/javascript/angular.js"></script>
+<script src="../common/javascript/angular-route.js"></script>
+<script src="javascript/login-app.js"></script>
+<script src="javascript/controller/login-controller.js"></script>
+</body>
+</html>

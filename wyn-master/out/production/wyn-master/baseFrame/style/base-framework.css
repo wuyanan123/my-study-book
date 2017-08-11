@@ -1,0 +1,131 @@
+/*body{*/
+    /*margin:0;*/
+    /*font-family:"Helvetica Neue",Helvetica,Arial,"微软雅黑","宋体","黑体",sans-serif;*/
+    /*font-size:16px;*/
+    /*line-height:20px;*/
+    /*color:#333;background-color:#ffffff;*/
+/*}*/
+body{
+    height:100%;
+    width:100%;
+    min-width: 1024px;
+}
+html,body,p{
+    margin: 0;
+    overflow: hidden;
+}
+ul,li{
+    margin: 0;
+    padding: 0;
+}
+.base-framework-index{
+    height:100%;
+    width:100%;
+    /*overflow: auto;*/
+}
+.base-framework-head{
+    height:70px;
+}
+.base-framework-head .base-framework-top{
+    display: flex;
+    height:40px;
+    background-color: black;
+    color:white;
+    line-height: 40px;
+    font-family:"Helvetica Neue",Helvetica,Arial,"微软雅黑","宋体","黑体",sans-serif;
+}
+.framework-left{
+    flex: 1;
+    padding-left: 10px;
+    font-family:"Helvetica Neue",Helvetica,Arial,"微软雅黑","宋体","黑体",sans-serif;
+}
+.framework-left span:nth-child(1){
+    font-size: 17px;
+    font-weight: bolder;
+}
+.framework-left span:nth-child(2){
+    font-size: 22px;
+    font-weight: bolder;
+}
+.base-framework-head .base-framework-bottom{
+    height:30px;
+    background-color: blue;
+    line-height: 30px;
+}
+.framework-right{
+    padding-right: 20px;
+}
+
+/* 菜单显示设置 */
+.main-menu{
+    display: flex;
+    align-items:flex-start;
+    color:white;
+    font-weight: bolder;
+    padding-left: 10px;
+}
+.main-menu li{
+    list-style: none;
+    position: relative;
+}
+.main-menu .menu-li-title > a{
+    display: inline-block;
+    font-size: 17px;
+    padding: 0px 5px;
+    text-align: center;
+    text-decoration:none;
+}
+
+.main-menu .menu-li-title:hover{
+    color:#0b5a8f;
+    background-color:#fff;
+    text-decoration: none;
+}
+.main-menu li:hover > ul{
+    display: block;
+    /*color:#0b5a8f;*/
+    /*background-color:#fff;*/
+}
+
+.sub-menu{
+    border:1px solid blue;
+    background-color: white;
+    border-top:0px;
+    position: absolute;
+    z-index: 9000;
+    display: none;
+    min-width:200px;
+    max-height:706px;
+    left:-1px;
+    top:30px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 4px 4px;
+    font-weight: bolder;
+}
+.sub-menu li{
+    position: relative;
+    display:block;
+    list-style: none;
+    margin: 4px;
+    padding-left: 10px;
+    border-radius: 2px;
+}
+.sub-menu li > a{
+    color:#000;
+    text-decoration:none;
+    display:block;
+    padding:0px 6px;
+}
+.sub-menu li:hover{background-color:#7fc3ff;}
+/*  框架页面显示空间样式设置 */
+.base-framework-index .framework-iframe{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+}
+.base-framework-index .base-frame-space{
+    overflow:hidden;
+}
+

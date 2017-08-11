@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="transformApp">
+<head>
+    <meta charset="UTF-8">
+    <title>css3页面布局--多栏布局</title>
+</head>
+<body>
+<section class="column-layout-index show-space">
+    <header>
+        <h1>多栏布局</h1>
+    </header>
+    <div class="show-content-space">
+        <section class="column-space">
+            <header>
+                <h2>多栏布局</h2>
+                <aside>
+                    属性列表：column-count:数字；column-gap:每个栏之间的间距；
+                    column-rule:增加间隔线；column-width:栏宽度
+                </aside>
+            </header>
+            <div class="column-content">
+                <section class="left-space">
+                    <header>
+                        <h3>属性说明:</h3>
+                    </header>
+                    <div class="content-scroll">
+                        <ol>
+                            <li>column-count：属性值为一个数字表示列数，不带单位，含义是将一个元素中的内容分为多栏进行显示。</li>
+                            <li>column-gap：设定多栏之间的间隔距离</li>
+                            <li>column-rule：在栏与栏之间增加间隔线；用法与border一致；
+                                <br>例：column:2px solid green;
+                            </li>
+                            <li>column-width：设置每一栏的宽度。<br>
+                                说明：<br>
+                                在设定column-width的同时必须设置盒子的width，否则盒子宽度默认为100%，
+                                每栏宽度按照栏数平均分。盒子每栏宽度必须大于等于column-width设定的值，
+                                否则就会减少栏数来增加每栏宽度，例如盒子宽度400px，一共2栏，那么每栏宽度就是200px，
+                                如果设置column-width: 210px的话盒子就会变成1栏以保证每栏宽度大于等于column-width:210px;，
+                                但是如果每栏宽度大于column-width的值时每栏宽度也不会强制等于column-width，
+                                这么看column-width的个性有点像min-width。
+                            </li>
+
+                        </ol>
+                    </div>
+                </section>
+                <section class="right-space">
+                    <header>
+                        <h3>css3动画--多栏布局练习:</h3>
+                    </header>
+                    <div class="test two-test">
+                        <div class="test-content-space">
+                            <div id="div">
+                                <p>示例文字1；华盛顿减肥客户的说法多少分很多事积分好的风景
+                                    的核对时间第三方接口的和发的是尽快发货打到回府接口 电话费
+                                    很多粉丝 的说法是否会多少分返回多少积分 电话费绝对是方
+                                    佛挡杀佛广东省的画法几何的富华大厦尽快发货都是废话，
+                                    货到付款的恢复的说法黄齑淡饭，多少分发到空间返回发单
+                                    的防护水电费恢复点击返回的恢复发货都是废话撒符合度fgh
+                                    fhdshfj fsdjk合法及都是废话
+                                </p>
+                                <p>示例文字2；华盛顿减肥客户的说法多少分很多事积分好的风景
+                                    的核对时间第三方接口的和发的是尽快发货打到回府接口 电话费
+                                    很多粉丝 的说法是否会多少分返回多少积分 电话费绝对是方
+                                    佛挡杀佛广东省fhajk的画法几何的富华大厦尽快发货都是
+                                </p>
+                            </div>
+                            <div>
+                                <p>华盛顿减肥客户的说法多少分很多事积分好的风景
+                                    的核对时间第三方接口的和发的是尽快发货打到回府接口 电话费
+                                    很多粉丝 的说法是否会多少分返回多少积分 电话费绝对是方
+                                    佛挡杀佛广东省的画法几何的富华大厦尽快发货都是废话
+                                </p>
+                                <p>华盛顿减肥客户的说法多少分很多事积分好的风景
+                                    的核对时间第三方接口的和发的是尽快发货打到回府接口 电话费
+                                    很多粉丝 的说法是否会多少分返回多少积分 电话费绝对是方
+                                    佛挡杀佛广东省的画法几何的富华大厦尽快发货都是废话
+                                </p>
+                                <p>华盛顿减肥客户的说法多少分很多事积分好的风景
+                                    的核对时间第三方接口的和发的是尽快发货打到回府接口 电话费
+                                    很多粉丝 的说法是否会多少分返回多少积分 电话费绝对是方
+                                    佛挡杀佛广东省的画法几何的富华大厦尽快发货都是废话
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </div>
+
+</section>
+</body>
+</html>

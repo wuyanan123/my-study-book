@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="transformApp">
+<head>
+    <meta charset="UTF-8">
+    <title>css3动画实现</title>
+</head>
+<body>
+<section class="transition-index transform-index show-space">
+    <header>
+        <h1>transition</h1>
+    </header>
+    <div class="show-content-space">
+        <section class="content-space">
+            <header>
+                <h2>transition实现动画</h2>
+                <aside>
+                    使用方法：transition: property duration timing-function delay
+                </aside>
+            </header>
+            <div class="main-space">
+                <section class="left-space">
+                    <header>
+                        <h3>属性值说明:</h3>
+                    </header>
+                    <div class="content-scroll">
+                        <span class="attr-style">transition</span>
+                        <ol>
+                            <li>property:表示对哪个属性进行平滑过渡</li>
+                            <li>duration:表示多久时间内完成属性的平滑过渡</li>
+                            <li>timing-function:表示用什么方法进行平滑过渡</li>
+                            <li>delay:表示延迟多少时间后再进行平滑过渡</li>
+                            <li>
+                                单独使用
+                                <ul>
+                                    <li>transition-property:属性(property)</li>
+                                    <li>transition-duration:持续时间</li>
+                                    <li>transition-timing-function:过渡方法(例:linear)</li>
+                                    <li>transition-delay:延迟时间</li>
+                                </ul>
+                            </li>
+                            <span class="importance-content">
+                                例如：对transform属性进行持续3s的线性平滑过渡,延迟2s
+                                <br>transition:transform 3s linear 2s;<br>
+                                同时平滑过渡多个属性值<br>
+                                transition:transform 3s linear 2s, color 2s linear 1s,opacity 4s linear 1s;
+                                <br>transition:all 3s linear 4s;// 所有属性都平滑过渡
+                            </span>
+                        </ol>
+                    </div>
+                </section>
+                <section class="right-space">
+                    <header>
+                        <h3>css3动画--transition练习:</h3>
+                    </header>
+                    <div class="test one-test content-scroll">
+                        <div class="test-content-space">
+                            <div class="test-content">示例文字</div>
+                            <div id="oneId" class="test-content">示例文字</div>
+                        </div>
+                        <div class="content-footer-relative btn-center">
+                            <button class="btn-primary btn" ng-click="transitionFun()">transition</button>
+                            <button class="btn-primary btn" ng-click="translateTestFun('init')">初始化</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section class="animations-space">
+            <header>
+                <h2>Animations</h2>
+                <aside>
+                    基本用法：column-count:列数；column-gap:每个栏之间的间距；
+                    column-rule:
+                </aside>
+            </header>
+            <div class="animations-content">
+                <section class="left-space">
+                    <header>
+                        <h3>Animation属性说明:</h3>
+                    </header>
+                    <div class="content-scroll">
+                        <span class="attr-style">
+                            animation:keyframe的名称 动画的执行时长 实现方法 延迟时间 执行次数 执行方向;
+                        </span>
+                        <ol>
+                            <li>@keyframes 关键帧集合名{创建关键帧的代码}</li>
+                            <li>animation-name:指定创建的关键帧集合名</li>
+                            <li>animation-duration:指定完成整个动画所花费的时间</li>
+                            <li>animation-delay:执行延迟多少时间后开始执行动画</li>
+                            <li>animation-iteration-count:用于指定动画的执行次数，可指定为infinite(无限次)</li>
+                            <li>animation-timing-function:动画的实现方法
+                                <ul>
+                                    <li>linear:在动画开始时与结束时以同样的速度进行改变</li>
+                                    <li>ease-in:动画开始时速度很慢，然后速度沿曲线值进行加快</li>
+                                    <li>ease-out:动画开始时速度很快，然后速度沿曲线值放慢</li>
+                                    <li>ease:先慢-->沿曲线值加快-->再沿曲线值放慢</li>
+                                    <li>ease-in-out:同上，先慢-->再快-->再慢</li>
+                                </ul>
+                            </li>
+                            <li>animation-direction:用于指定动画的执行方向
+                                <ul>
+                                    <li>normal:初始值(动画执行完毕后返回初始状态)</li>
+                                    <li>alternate:交替更改动画的执行方向</li>
+                                    <li>reverse:反方向执行动画</li>
+                                    <li>alternate-reverse:从反方向开始交替更改动画的执行方向</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </section>
+                <section class="left-space">
+                    <header>
+                        <h3>Animation使用例子:</h3>
+                    </header>
+                    <div class="content-scroll">
+                        div{background-color:red}<br>
+                        @-webkit-keyframes myColor{<br>
+                        &nbsp; 0%{background-color:red;}<br>
+                        &nbsp; 40%{background-color:darkblue;}<br>
+                        &nbsp; 70%{background-color:yellow;}<br>
+                        &nbsp; 100%{background-color:red;}<br>
+                        }<br>
+                        div:hover{<br>
+                        &nbsp; -webkit-animation-name: myColor;<br>
+                        &nbsp; -webkit-animation-duration: 5s;<br>
+                        &nbsp; -webkit-animation-timing-function:linear;<br>
+                        &nbsp; -webkit-animation-delay:2s;<br>
+                        &nbsp; -webkit-animation-iteration-count:infinite(无限次)<br>
+                        &nbsp; -webkit-animation-direction:alternate<br>
+                        }
+                    </div>
+                </section>
+                <section class="right-space">
+                    <header>
+                        <h3>css3动画--Animations练习:</h3>
+                    </header>
+                    <div class="test two-test">
+                        <div class="test-content-space">
+                            <div class="test-content">示例文字</div>
+                            <div id="rotate" class="test-content">示例文字</div>
+                        </div>
+                        <div class="content-footer-relative btn-center">
+                            <button class="btn-primary btn" ng-click="animationFun('start')">旋转木马</button>
+                            <button class="btn-primary btn" ng-click="animationFun('stop')">停止</button>
+                            <button class="btn-primary btn" ng-click="rotateTestFun('220')">旋转220deg</button>
+                            <button class="btn-primary btn" ng-click="rotateTestFun('init')">初始化</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </div>
+
+</section>
+
+</body>
+</html>

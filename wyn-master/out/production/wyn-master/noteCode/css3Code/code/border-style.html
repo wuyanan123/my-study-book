@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>边框相关样式</title>
+</head>
+<body>
+<section class="border-style-index show-space">
+    <header>
+        <h1>边框相关样式</h1>
+    </header>
+    <div class="show-content-space">
+        <section class="content-space">
+            <header>
+                <h2>圆角边框</h2>
+                <aside>
+                    使用说明：border-radius: none | length {1,4} / length {1,4} ]
+                </aside>
+            </header>
+            <div class="main-space">
+                <section class="right-space">
+                    <header>
+                        <h3>属性值说明:</h3>
+                    </header>
+                    <div class="content-scroll">
+                        <ol>
+                            <li>
+                                length： 由浮点数字和单位标识符组成的长度值。不可为负值。
+                            </li>
+                            <li>border-radius 是一种缩写方法。如果“/”前后的值都存在，
+                                那么“/”前面的值设置其水平半径，
+                                “/”后面值设置其垂直半径。如果没有“/”，则水平和垂直半径相等。
+                                另外其四个值是按照top-left、top-right、bottom-right、bottom-left的顺序
+                                来设置的其主要会有下面几种情形出现：
+                                <ul>
+                                    <li>只有一个值，那么 top-left、top-right、bottom-right、bottom-left 四个值相等。</li>
+                                    <li>有两个值，那么 top-left 等于 bottom-right，并且取第一个值；
+                                        top-right 等于 bottom-left，并且取第二个值。</li>
+                                    <li>有三个值，其中第一个值是设置top-left;而第二个值是 top-right 和
+                                        bottom-left 并且他们会相等,第三个值是设置 bottom-right。</li>
+                                    <li>有四个值，其中第一个值是设置 top-left 而第二个值是 top-right
+                                        第三个值 bottom-right 第四个值是设置 bottom-left。</li>
+                                </ul>
+                            </li>
+                            <li>border-radius 和 border 属性一样，还可以把各个角单独拆分出来，
+                                也就是以下四种写法，这里我规纳一点，他们都是先Y轴在X轴：
+                                <ul>
+                                    <li>border-top-left-radius: length length //左上角 </li>
+                                    <li>border-top-right-radius: length length //右上角</li>
+                                    <li>border-bottom-right-radius:length length //右下角</li>
+                                    <li>border-bottom-left-radius:length length //左下角</li>
+                                </ul>
+                            </li>
+                            <li>
+                                各角拆分出来取值方式：length length 中第一个值是圆角水平半径，
+                                第二个值是垂直半径,如果第二个值省略，那么其等于第一个值，
+                                这时这个角就是一个四分之一的圆角，如果任意一个值为0，那么这个角就不是圆角。
+                            </li>
+                            <span class="importance-content">
+                                border-radius:5px 5px 5px 10px/15px;
+                            </span>
+                        </ol>
+                    </div>
+                </section>
+                <section class="left-space">
+                    <header>
+                        <h3>圆角边框练习:</h3>
+                    </header>
+                    <div class="one-test">
+                        <div class="test-child-content test-content-no-border">to bottom right</div>
+                        <div class="test-child-content test-content-no-border">to bottom</div>
+                        <div class="test-child-content test-content-no-border">0deg</div>
+                        <div class="test-child-content test-content-no-border">45deg</div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section class="content-space">
+            <header>
+                <h2>背景边框</h2>
+                <aside>
+                    使用说明：border-image:url(图片地址)
+                </aside>
+            </header>
+            <div class="main-space">
+                <section class="right-space">
+                    <header>
+                        <h3>属性值说明:</h3>
+                    </header>
+                    <div class="content-scroll">
+                        <ol>
+
+                        </ol>
+                    </div>
+                </section>
+                <section class="left-space">
+                    <header>
+                        <h3>背景边框练习:</h3>
+                    </header>
+                    <div class="two-test">
+                        <div class="test-child-content test-content-no-border">to bottom right</div>
+                        <div class="test-child-content test-content-no-border">to bottom</div>
+                        <div class="test-child-content test-content-no-border">0deg</div>
+                        <div class="test-child-content test-content-no-border">45deg</div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </div>
+</section>
+</body>
+</html>

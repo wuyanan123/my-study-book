@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="testIndexApp">
+<head>
+    <meta charset="UTF-8">
+    <title>3D变形练习</title>
+</head>
+<body>
+<section class="transform-test-index">
+    <header class="title-header">
+        <h1>3D变形练习</h1>
+    </header>
+    <div class="test-area">
+        <section class="test-content-space">
+            <header class="child-test-header">
+                <h3>第一个练习</h3>
+            </header>
+            <div class="child-test-space">
+                <div class="child-test-space-content one-test">
+                    <ul id="img">
+                        <li id="li"><img src="img/transform/a.png" alt=""></li>
+                        <li><img src="img/transform/b.png" alt=""></li>
+                        <li><img src="img/transform/c.png" alt=""></li>
+                        <li><img src="img/transform/d.png" alt=""></li>
+                        <li><img src="img/transform/e.png" alt=""></li>
+                        <li><img src="img/transform/f.png" alt=""></li>
+                        <li><img src="img/transform/g.png" alt=""></li>
+                        <li><img src="img/transform/h.png" alt=""></li>
+                        <li><img src="img/transform/1.jpg" alt=""></li>
+                    </ul>
+                </div>
+                <footer class="content-footer-relative btn-center">
+                    <botton class="btn btn-primary" ng-click="turnFun('left')">向左转</botton>
+                    <botton class="btn btn-primary" ng-click="turnFun('right')">向右转</botton>
+                    <botton class="btn btn-primary" ng-click="turnAllFun('left')">一直向左转</botton>
+                    <botton class="btn btn-primary" ng-click="turnAllFun('right')">一直向右转</botton>
+                    <botton class="btn btn-primary" ng-click="turnStopFun('right')">停止</botton>
+                </footer>
+            </div>
+
+        </section>
+        <section class="test-content-space">
+            <header class="child-test-header">
+                <h3>第二个练习</h3>
+            </header>
+            <div class="child-test-space">
+                <div class="child-test-space-content two-test">
+                    <ul>
+                        <li>
+                            <div class="front"></div>
+                            <div class="behind"></div>
+                            <div class="left"></div>
+                            <div class="right"></div>
+                            <div class="top"></div>
+                            <div class="bottom"></div>
+                        </li>
+                        <li>
+                            <div class="front"></div>
+                            <div class="behind"></div>
+                            <div class="left"></div>
+                            <div class="right"></div>
+                            <div class="top"></div>
+                            <div class="bottom"></div>
+                        </li>
+                        <li>
+                            <div class="front"></div>
+                            <div class="behind"></div>
+                            <div class="left"></div>
+                            <div class="right"></div>
+                            <div class="top"></div>
+                            <div class="bottom"></div>
+                        </li>
+                        <li style="z-index: -1;">
+                            <div class="front"></div>
+                            <div class="behind"></div>
+                            <div class="left"></div>
+                            <div class="right"></div>
+                            <div class="top"></div>
+                            <div class="bottom"></div>
+                        </li>
+                    </ul>
+                </div>
+                <footer class="content-footer-relative btn-center">
+                    <botton class="btn btn-primary">点击</botton>
+                    <botton class="btn btn-primary">按钮</botton>
+                </footer>
+            </div>
+        </section>
+    </div>
+    <footer>
+
+    </footer>
+</section>
+</body>
+</html>

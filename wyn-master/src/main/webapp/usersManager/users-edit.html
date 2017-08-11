@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html ng-app="usersApp">
+<head>
+    <meta charset="UTF-8">
+    <title>用户修改</title>
+    <link rel="stylesheet" href="../common/styles/zTreeStyle.css">
+    <link rel="stylesheet" href="../common/styles/heren-select2.css">
+    <link rel="stylesheet" href="../common/styles/heren-component.css">
+    <link rel="stylesheet" href="../common/styles/ng-grid.css">
+    <link rel="stylesheet" href="../common/styles/my-common.css">
+    <link rel="stylesheet" href="styles/users.css">
+    <link rel="stylesheet" href="styles/users-edit.css">
+</head>
+<body ng-controller="usersEditController" class="body-height">
+    <section class="users-edit-index">
+        <header class="my-title">
+            <h1>用户信息修改</h1>
+        </header>
+        <section class="main-content">
+            <section class="main-left">
+                <header class="my-child-title">
+                    <h3>zTree练习</h3>
+                </header>
+                <div>
+                    <ul id="treeDemo" class="ztree" style="font-size: 20px;"></ul>
+                </div>
+                <div>
+                    <select ui-select2>
+                        <option value="">one</option>
+                        <option value="">two</option>
+                        <option value="">three</option>
+                        <option value="">four</option>
+                    </select>
+                </div>
+            </section>
+            <section class="main-right">
+                <header class="my-child-title">
+                    <h3>modal练习以及grid</h3>
+                </header>
+                <section class="modal-test">
+                    <header class="my-child-title">
+                        <h3>modal练习</h3>
+                    </header>
+                    <div class="btn-center">
+                        <button class="btn btn-primary" ng-click="openModalFun()">打开modal</button>
+                    </div>
+                </section>
+                <section class="grid-test">
+                    <header class="my-child-title">
+                        <h3>grid</h3>
+                    </header>
+                    <div class="grid-test-content" ng-grid="gridOneOpts"></div>
+                </section>
+            </section>
+        </section>
+        <footer class="content-footer btn-center">
+            <button class="btn btn-primary">关闭</button>
+        </footer>
+    </section>
+
+    <!-- modal框 -->
+    <div ng-show="openModal" class="modal edit-modal fade in">
+        <div class="modal-header">
+            <button type="button" class="close" ng-click="closeModalFun()">&times;</button>
+            <h5>大黄蜂</h5>
+        </div>
+        <div class="modal-body">
+            <div class="alert-triangle-up">
+                <span>!</span>
+            </div>
+            淡饭黄齑
+        </div>
+    </div>
+    <!-- 打开时的遮挡层 -->
+    <div ng-show="openModal" class="modal-backdrop fade in"></div>
+
+<script src="../common/javascript/jquery.js"></script>
+<script src="../common/javascript/jquery-ui.js"></script>
+<script src="../common/javascript/select2.js"></script>
+<script src="../common/javascript/select2_locale_zh-CN.js"></script>
+<script src="../common/javascript/angular.js"></script>
+<script src="../common/javascript/angular-ui.js"></script>
+<script src="../common/javascript/utils/heren-ui.js"></script>
+<script src="../common/javascript/jquery.ztree.core.js"></script>
+<script src="../common/javascript/ui-bootstrap-tpls.js"></script>
+<script src="../common/javascript/ng-grid.js"></script>
+<script src="users-app.js"></script>
+<script src="javascript/users-edit-controller.js"></script>
+</body>
+</html>

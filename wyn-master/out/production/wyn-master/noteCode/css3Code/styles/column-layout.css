@@ -1,0 +1,36 @@
+/* 多栏 样式 */
+.column-layout-index .column-space{
+    border: 1px solid silver;
+    overflow: hidden;
+    overflow-y: auto;
+    height:99%;
+}
+.column-layout-index .column-content{
+    display: flex;
+    height:99%;
+}
+.column-layout-index .test-content-space{
+    border:2px solid goldenrod;
+    width:90%;
+    height:70%;
+    perspective:1000px;
+    position: relative;
+    /*-webkit-column-count: 3;*/
+    /*-webkit-column-gap:20px;*/
+    /*-webkit-column-rule: 1px solid black;*/
+}
+
+.column-layout-index .test-content-space #div{
+    height:80%;
+    -webkit-column-count: 3;
+    -webkit-column-gap:20px;
+    -webkit-column-width:10px;
+    -webkit-column-rule: 1px dashed black;
+}
+.column-layout-index .test-content-space p{
+    /*float: left;*/
+    border: 1px solid seagreen;
+    margin:10px;
+    width:90%;
+}
+

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 在IE中最新的渲染模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 初始化移动浏览显示  控制视口的大小 width=device-width 控制视口的宽
+      这里默认设备视口大小 initial-scale=1 控制视口的缩放比例-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@media媒体查询</title>
+    <!-- Bootstrap -->
+    <!--<link href="../../styles/common/bootstrap.css" rel="stylesheet">-->
+    <!--你自己的样式文件 -->
+    <!--<link rel="stylesheet" href="media-style.css">-->
+    <!-- 以下两个插件用于在IE8以及以下版本浏览器支持HTML5元素和媒体查询，如果不需要用可以移除 -->
+    <!--[if 低于 IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    <section class="media-index">
+        <header>
+            <h1>@media媒体查询(用法介绍)</h1>
+        </header>
+        <div class="main">
+            <section class="main-left">
+                <header>
+                    <h2>功能导航</h2>
+                </header>
+                <div>
+                    <h3>导航栏</h3>
+                    <ul class="nav nav-pills nav-stacked">
+                        <li><a href="javascript:void(0);">CSS3 多媒体查询</a></li>
+                        <li><a href="javascript:void(0);">多媒体查询语法</a></li>
+                        <li><a href="javascript:void(0);">CSS3 多媒体类型</a></li>
+                        <li><a href="javascript:void(0);">@media媒体功能</a></li>
+                        <li><a href="javascript:void(0);">多媒体查询简单实例</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="main-right">
+                <header>
+                    <h2>@media媒体查询(用法简介)</h2>
+                </header>
+                <div class="media-main-content">
+                    <section id="index1" class="panel panel-success">
+                        <header class="panel-heading">
+                            <h4 class="panel-title">CSS3 多媒体查询</h4>
+                        </header>
+                        <div class="panel-body">
+                            <strong>
+                                CSS3 的多媒体查询继承了 CSS2 多媒体类型的所有思想： 取代了查找设备的类型，CSS3 根据设置自适应显示。
+                                媒体查询可用于检测很多事情，例如：
+                            </strong>
+                            <ul>
+                                <li>viewport(视窗) 的宽度与高度</li>
+                                <li>设备的宽度与高度</li>
+                                <li>朝向 (智能手机横屏，竖屏) 。</li>
+                                <li>分辨率</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section id="index2" class="panel panel-success">
+                        <header class="panel-heading">
+                            <h4 class="panel-title">多媒体查询语法</h4>
+                        </header>
+                        <div class="panel-body">
+                            <b>多媒体查询由多种媒体组成，可以包含一个或多个表达式，
+                                表达式根据条件是否成立返回 true 或 false。</b>
+                            <p>
+                                <strong>
+                                    @media not|only mediatype and (expressions) {<br>
+                                    &nbsp; &nbsp; &nbsp;CSS 代码...;<br>
+                                    } <br>
+                                如果指定的多媒体类型匹配设备类型则查询结果返回 true，文档会在匹配的设备上显示指定样式效果。
+                                除非你使用了 not 或 only 操作符，否则所有的样式会适应在所有设备上显示效果。
+                                </strong>
+                            </p>
+                            <ul>
+                                <li>not: not是用来排除掉某些特定的设备的，比如 @media not print（非打印设备）。</li>
+                                <li>
+                                    only: 用来定某种特别的媒体类型。对于支持Media Queries的移动设备来说，如果存在only关键字，
+                                    移动设备的Web浏览器会忽略only关键字并直接根据后面的表达式应用样式文件。
+                                    对于不支持Media Queries的设备但能够读取Media Type类型的Web浏览器，
+                                    遇到only关键字时会忽略这个样式文件。
+                                </li>
+                                <li>all: 所有设备，这个应该经常看到。</li>
+                                <li>
+                                    你也可以在不同的媒体上使用不同的样式文件：
+                                    <p>
+                                        <strong>
+                                            < link rel="stylesheet" media="mediatype and|not|only (expressions)" href="print.css">
+                                        </strong>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section id="index3" class="panel panel-success">
+                        <header class="panel-heading">
+                            <h4 class="panel-title">CSS3 多媒体类型</h4>
+                        </header>
+
+                        <table class="table table-bordered table-striped table-hover table-condensed">
+                            <tr>
+                                <th>值</th>
+                                <th>描述</th>
+                            </tr>
+                            <tr>
+                                <td>all</td>
+                                <td>用于所有多媒体类型设备</td>
+                            </tr>
+                            <tr>
+                                <td>print</td>
+                                <td>用于打印机</td>
+                            </tr>
+                            <tr>
+                                <td>screen</td>
+                                <td>用于电脑屏幕，平板，智能手机等。</td>
+                            </tr>
+                            <tr>
+                                <td>screen</td>
+                                <td>用于电脑屏幕，平板，智能手机等。</td>
+                            </tr>
+                            <tr>
+                                <td>speech</td>
+                                <td>用于屏幕阅读器。</td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section id="index4" class="panel panel-success">
+                        <header class="panel-heading">
+                            <h4 class="panel-title">@media媒体功能</h4>
+                        </header>
+                        <table class="table table-bordered table-striped table-hover table-condensed">
+                            <tr>
+                                <th>值</th>
+                                <th>描述</th>
+                            </tr>
+                            <tr>
+                                <td>aspect-ratio</td>
+                                <td>定义输出设备中的<b>页面</b>可见区域宽度与高度的比率</td>
+                            </tr>
+                            <tr>
+                                <td>color</td>
+                                <td>定义输出设备每一组彩色原件的个数。如果不是彩色设备，则值等于0</td>
+                            </tr>
+                            <tr>
+                                <td>color-index</td>
+                                <td>定义在输出设备的彩色查询表中的条目数。如果没有使用彩色查询表，则值等于0</td>
+                            </tr>
+                            <tr>
+                                <td>device-aspect-ratio</td>
+                                <td>定义输出设备的<b>屏幕</b>可见宽度与高度的比率。</td>
+                            </tr>
+                            <tr>
+                                <td>device-height</td>
+                                <td>定义输出设备的<b>屏幕</b>可见高度。</td>
+                            </tr>
+                            <tr>
+                                <td>device-width</td>
+                                <td>定义输出设备的<b>屏幕</b>可见宽度。</td>
+                            </tr>
+                            <tr>
+                                <td>grid</td>
+                                <td>用来查询输出设备是否使用栅格或点阵。</td>
+                            </tr>
+                            <tr>
+                                <td>height</td>
+                                <td>定义输出设备中的<b>页面</b>可见区域高度。</td>
+                            </tr>
+                            <tr>
+                                <td>width</td>
+                                <td>定义输出设备中的<b>页面</b>可见区域宽度。</td>
+                            </tr>
+                            <tr>
+                                <td>max-aspect-ratio</td>
+                                <td>定义输出设备的页面可见宽度与高度的最大比率。</td>
+                            </tr>
+                            <tr>
+                                <td>max-color</td>
+                                <td>定义输出设备每一组彩色原件的最大个数。</td>
+                            </tr>
+                            <tr>
+                                <td>max-color-index</td>
+                                <td>定义在输出设备的彩色查询表中的最大条目数。</td>
+                            </tr>
+                            <tr>
+                                <td>max-device-aspect-ratio</td>
+                                <td>定义输出设备的屏幕可见宽度与高度的最大比率。</td>
+                            </tr>
+                            <tr>
+                                <td>max-device-height</td>
+                                <td>定义输出设备的屏幕可见的最大高度。</td>
+                            </tr>
+                            <tr>
+                                <td>max-device-width</td>
+                                <td>定义输出设备的屏幕最大可见宽度。</td>
+                            </tr>
+                            <tr>
+                                <td>max-height</td>
+                                <td>定义输出设备中的页面最大可见区域高度。</td>
+                            </tr>
+                            <tr>
+                                <td>max-width</td>
+                                <td>定义输出设备中的页面最大可见区域宽度。</td>
+                            </tr>
+                            <tr>
+                                <td>max-monochrome</td>
+                                <td>定义在一个单色框架缓冲区中每像素包含的最大单色原件个数。</td>
+                            </tr>
+                            <tr>
+                                <td>max-resolution</td>
+                                <td>定义设备的最大分辨率。</td>
+                            </tr>
+                            <tr>
+                                <td>min-aspect-ratio</td>
+                                <td>定义输出设备中的页面可见区域宽度与高度的最小比率。</td>
+                            </tr>
+                            <tr>
+                                <td>min-color</td>
+                                <td>定义输出设备每一组彩色原件的最小个数。</td>
+                            </tr>
+                            <tr>
+                                <td>min-color-index</td>
+                                <td>定义在输出设备的彩色查询表中的最小条目数。</td>
+                            </tr>
+                            <tr>
+                                <td>min-device-aspect-ratio</td>
+                                <td>定义输出设备的屏幕可见宽度与高度的最小比率。</td>
+                            </tr>
+                            <tr>
+                                <td>min-device-width</td>
+                                <td>定义输出设备的屏幕最小可见宽度。</td>
+                            </tr>
+                            <tr>
+                                <td>min-device-height</td>
+                                <td>定义输出设备的屏幕的最小可见高度。</td>
+                            </tr>
+                            <tr>
+                                <td>min-height</td>
+                                <td>定义输出设备中的页面最小可见区域高度。</td>
+                            </tr>
+                            <tr>
+                                <td>min-width</td>
+                                <td>定义输出设备中的页面最小可见区域宽度。</td>
+                            </tr>
+                            <tr>
+                                <td>min-monochrome</td>
+                                <td>定义在一个单色框架缓冲区中每像素包含的最小单色原件个数</td>
+                            </tr>
+                            <tr>
+                                <td>min-resolution</td>
+                                <td>定义设备的最小分辨率。</td>
+                            </tr>
+                            <tr>
+                                <td>monochrome</td>
+                                <td>定义在一个单色框架缓冲区中每像素包含的单色原件个数。如果不是单色设备，则值等于0</td>
+                            </tr>
+                            <tr>
+                                <td>orientation</td>
+                                <td>定义输出设备中的页面可见区域高度是否大于或等于宽度。</td>
+                            </tr>
+                            <tr>
+                                <td>resolution</td>
+                                <td>定义设备的分辨率。如：96dpi, 300dpi, 118dpcm</td>
+                            </tr>
+                            <tr>
+                                <td>scan</td>
+                                <td>定义电视类设备的扫描工序。</td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section id="index5" class="panel panel-success">
+                        <header class="panel-heading">
+                            <h4 class="panel-title">多媒体查询简单实例</h4>
+                        </header>
+                        <div class="panel-body">
+                            <strong>
+                                使用多媒体查询可以在指定的设备上使用对应的样式替代原有的样式。
+                                以下实例中在屏幕可视窗口尺寸大于 480 像素的设备上修改背景颜色:
+                            </strong>
+                            <ol>
+                                <li>
+                                    使用多媒体查询可以在指定的设备上使用对应的样式替代原有的样式。
+                                    以下实例中在屏幕可视窗口尺寸大于 480 像素的设备上修改背景颜色:
+                                    <ul>
+                                        <li>
+                                            @media screen and (min-width: 480px) { <br>
+                                            &nbsp;  &nbsp;body { <br>
+                                            &nbsp;  &nbsp;  &nbsp; background-color: lightgreen; <br>
+                                            &nbsp;  &nbsp;} <br>
+                                            } <br>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    以下实例在屏幕可视窗口尺寸大于 480 像素时将菜单浮动到页面左侧：
+                                    <ul>
+                                        <li>
+                                            @media screen and (min-width: 480px) { <br>
+                                             &nbsp; &nbsp; #leftsidebar {width: 200px; float: left;} <br>
+                                             &nbsp; &nbsp; #main {margin-left:216px;} <br>
+                                            } <br>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </div>
+    </section>
+<!-- 如果要使用Bootstrap的js插件，必须先调入jQuery -->
+<!--<script src="../../javascripts/libs/jquery.min.js"></script>-->
+<!-- 包括所有bootstrap的js插件或者可以根据需要使用的js插件调用　-->
+<!--<script src="../../javascripts/libs/bootstrap.js"></script>-->
+</body>
+</html>

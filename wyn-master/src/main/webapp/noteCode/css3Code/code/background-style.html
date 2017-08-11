@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景相关样式</title>
+</head>
+<body>
+<section class="background-style show-space">
+    <header>
+        <h1>背景相关样式</h1>
+    </header>
+    <div class="show-content-space ">
+        <section class="content-space">
+            <header>
+                <h2>指定背景显示范围</h2>
+                <aside>
+                    使用说明：-webkit-background-clip: border(默认) / padding(padding-box);
+                </aside>
+            </header>
+            <div class="main-space">
+                <section class="left-space">
+                    <header>
+                        <h3>属性值说明:</h3>
+                    </header>
+                    <div>
+                        <ol>
+                            <li>border：背景范围包含边框区域</li>
+                            <li>padding：背景范围“不”包含边框区域</li>
+                            <span class="importance-content">例如：background-clip: border; </span>
+                        </ol>
+                    </div>
+                </section>
+                <section class="right-space">
+                    <header>
+                        <h3>指定背景显示范围练习:</h3>
+                    </header>
+                    <div class="one-test">
+                        <div class="test-child-content">默认</div>
+                        <div class="test-child-content">padding-box</div>
+                        <div class="test-child-content">border-box</div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section class="content-space">
+            <header>
+                <h2>指定背景图像的绘制起点</h2>
+                <aside>
+                    使用说明：-webkit-background-origin: padding(默认)/border(border-box)/content(content-box);
+                </aside>
+            </header>
+            <div class="main-space">
+                <section class="left-space">
+                    <header>
+                        <h3>属性值说明:</h3>
+                    </header>
+                    <div>
+                        <ol>
+                            <li>border：从边框的左上角开始绘制</li>
+                            <li>padding：从内部补白(padding)左上角开始绘制</li>
+                            <li>content：从内容左上角开始绘制</li>
+                            <span class="importance-content">例如：-webkit-background-origin: border-box; </span>
+                        </ol>
+                    </div>
+                </section>
+                <section class="right-space">
+                    <header>
+                        <h3>指定背景图像的绘制起点练习:</h3>
+                    </header>
+                    <div class="two-test">
+                        <div class="test-child-content background-test-content">默认</div>
+                        <div class="test-child-content background-test-content">border-box</div>
+                        <div class="test-child-content background-test-content">padding-box</div>
+                        <div class="test-child-content background-test-content">content-box</div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section class="content-space">
+            <header>
+                <h2>指定背景图像的尺寸</h2>
+                <aside>
+                    使用说明：-webkit-background-size: width height / width auto / auto height / contain / cover;
+                </aside>
+            </header>
+            <div class="main-space">
+                <section class="left-space">
+                    <header>
+                        <h3>属性值说明:</h3>
+                    </header>
+                    <div>
+                        <ol>
+                            <li>width height：设置的图片的宽和高</li>
+                            <li>contain：把原始图片在维持纵横比的前提下自动放大或缩小，
+                                以使原始图像的宽度或者高度完全等于元素的宽度或者高度，
+                            </li>
+                            <span class="importance-content">
+                                例如：当放大宽度先等于元素宽度时，高度会平铺图像填满元素高度
+                            </span>
+                            <li>
+                                cover：使原始图像在维持纵横比的前提下将背景图像自动缩放到填满元素内部，
+                                如果元素与图像长宽比例不一致，则将多余部分裁剪掉。
+                            </li>
+                            <span class="importance-content">例如：-webkit-background-size: 20px 40px; </span>
+                        </ol>
+                    </div>
+                </section>
+                <section class="right-space">
+                    <header>
+                        <h3>指定背景图像的尺寸练习:</h3>
+                    </header>
+                    <div class="three-test">
+                        <div class="test-child-content background-test-content">默认</div>
+                        <div class="test-child-content background-test-content">50px 130px</div>
+                        <div class="test-child-content background-test-content">contain</div>
+                        <div class="test-child-content background-test-content">cover</div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section class="content-space">
+            <header>
+                <h2>新增用于平铺背景图像的选项</h2>
+                <aside>
+                    使用说明：-webkit-background-repeat: no-repeat/repeat(默认)/repeat-x/repeat-y/
+                    <span class="importance-content">space/round</span>;
+                </aside>
+            </header>
+            <div class="main-space">
+                <section class="left-space">
+                    <header>
+                        <h3>属性值说明:</h3>
+                    </header>
+                    <div>
+                        <ol>
+                            <li>space：在水平、垂直平铺时，不剪掉超出的部分，也不会调整图像的尺寸，
+                                而是自动调整图像与图像之间的间距
+                            </li>
+                            <li>round：自动调整背景图形的尺寸</li>
+                            <span class="importance-content">
+                                例如：background-repeat:space;
+                            </span>
+                        </ol>
+                    </div>
+                </section>
+                <section class="right-space">
+                    <header>
+                        <h3>新增用于平铺背景图像的选项练习:</h3>
+                    </header>
+                    <div class="four-test">
+                        <div class="test-child-content background-test-content">默认</div>
+                        <div class="test-child-content background-test-content">no-repeat</div>
+                        <div class="test-child-content background-test-content">space</div>
+                        <div class="test-child-content background-test-content">round</div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </div>
+</section>
+</body>
+</html>

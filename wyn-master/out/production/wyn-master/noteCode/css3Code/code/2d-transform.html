@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="transformApp">
+<head>
+    <meta charset="UTF-8">
+    <title>变形处理</title>
+</head>
+<body ng-controller="transformController">
+<section class="transform-index show-space">
+    <header>
+        <h1>变形处理-->2D变形</h1>
+    </header>
+    <div class="show-content-space">
+        <section class="content-space">
+            <header>
+                <h2>移动</h2>
+                <aside>
+                    使用说明：transform:translate(x,y),
+                </aside>
+            </header>
+            <div class="main-space">
+                <section class="left-space">
+                    <header>
+                        <h3>属性值说明:</h3>
+                    </header>
+                    <div class="content-scroll">
+                        移动：
+                        <ol>
+                            <li>transform:translate(x,y)
+                                <ul>
+                                    <li>x: 移动的横向距离</li>
+                                    <li>y: 移动的纵向距离</li>
+                                </ul>
+                            </li>
+                            <li>transform:translate(x,0)</li>
+                            <li>transform:translate(0,y)</li>
+                        </ol>
+                    </div>
+                </section>
+                <section class="right-space">
+                    <header>
+                        <h3>2D变形--移动练习:</h3>
+                    </header>
+                    <div class="test one-test">
+                        <div class="test-content-space">
+                            <div class="test-content">示例文字</div>
+                            <div id="translate" class="test-content">示例文字</div>
+                        </div>
+                        <div class="content-footer-relative btn-center">
+                            <button class="btn-primary btn" ng-click="translateTestFun('X')">X轴方向移动</button>
+                            <button class="btn-primary btn" ng-click="translateTestFun('Y')">Y轴方向移动</button>
+                            <button class="btn-primary btn" ng-click="translateTestFun()">X、Y轴同时移动</button>
+                            <button class="btn-primary btn" ng-click="translateTestFun('init')">初始化</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section class="content-space">
+            <header>
+                <h2>旋转</h2>
+                <aside>
+                    使用说明：transform:rotate(angle-->角度);
+                </aside>
+            </header>
+            <div class="main-space">
+                <section class="left-space">
+                    <header>
+                        <h3>属性值说明:</h3>
+                    </header>
+                    <div class="content-scroll">
+                        旋转：
+                        <ol>
+                            <li>
+                                旋转方向--->顺时针方向旋转
+                            </li>
+                            <span class="importance-content">
+                                例：transform:rotate(40deg)
+                            </span>
+                        </ol>
+                    </div>
+                </section>
+                <section class="right-space">
+                    <header>
+                        <h3>2D变形--旋转练习:</h3>
+                    </header>
+                    <div class="test two-test">
+                        <div class="test-content-space">
+                            <div class="test-content">示例文字</div>
+                            <div id="rotate" class="test-content">示例文字</div>
+                        </div>
+                        <div class="content-footer-relative btn-center">
+                            <button class="btn-primary btn" ng-click="rotateTestFun('45')">旋转45deg</button>
+                            <button class="btn-primary btn" ng-click="rotateTestFun('90')">旋转90deg</button>
+                            <button class="btn-primary btn" ng-click="rotateTestFun('220')">旋转220deg</button>
+                            <button class="btn-primary btn" ng-click="rotateTestFun('init')">初始化</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section class="content-space">
+            <header>
+                <h2>缩放</h2>
+                <aside>
+                    使用说明：transform:scale(sx,sy);
+                </aside>
+            </header>
+            <div class="main-space">
+                <section class="left-space">
+                    <header>
+                        <h3>属性值说明:</h3>
+                    </header>
+                    <div class="content-scroll">
+                        缩放：
+                        <ol>
+                            <li>
+                                值说明：缩放基数为1，如果其值大于1元素就放大，
+                                反之其值小于1，元素缩小。著作权归作者所有。
+                            </li>
+                            <li>transform:scale(sx,sy)</li>
+                            <li>transform:(x,1)</li>
+                            <li>transform:(1,y)</li>
+                            <li>transform:scale(x)-->表示x、y的缩放值一样</li>
+                            <span class="importance-content">例：transform:scale(1.5,0.5)</span>
+                        </ol>
+                    </div>
+                </section>
+                <section class="right-space">
+                    <header>
+                        <h3>2D变形--旋转练习:</h3>
+                    </header>
+                    <div class="test three-test">
+                        <div class="test-content-space">
+                            <div class="test-content">示例文字</div>
+                            <div id="scale" class="test-content">示例文字</div>
+                        </div>
+                        <div class="content-footer-relative btn-center">
+                            <button class="btn-primary btn" ng-click="scaleTestFun('x')">scaleX(1.5)</button>
+                            <button class="btn-primary btn" ng-click="scaleTestFun('y')">scaleY(0.5)</button>
+                            <button class="btn-primary btn" ng-click="scaleTestFun('xy')">scale(1.5,0.5)</button>
+                            <button class="btn-primary btn" ng-click="scaleTestFun('init')">初始化</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section class="content-space">
+            <header>
+                <h2>倾斜</h2>
+                <aside>
+                    使用说明：transform:skew(angle,angle)
+                </aside>
+            </header>
+            <div class="main-space">
+                <section class="left-space">
+                    <header>
+                        <h3>属性值说明:</h3>
+                    </header>
+                    <div class="content-scroll">
+                        倾斜：
+                        <ol>
+                            <li>
+                                使用说明：
+                                <br>skew(x,y)使元素在水平和垂直方向同时倾斜
+                                （X轴和Y轴同时按一定的角度值进行倾斜变形）。
+                            </li>
+                            <li>transform:skew(angle,angle)</li>
+                            <li>transform:skew(angle,0deg),</li>
+                            <li>transform:skew(0deg,angle)</li>
+                            <li>transform:skew(angle)---> 只倾斜水平</li>
+                            <span class="importance-content">
+                                例：transform:skew(30deg,10deg);
+                            </span>
+                        </ol>
+                    </div>
+                </section>
+                <section class="right-space">
+                    <header>
+                        <h3>2D倾斜--旋转练习:</h3>
+                    </header>
+                    <div class="test four-test">
+                        <div class="test-content-space">
+                            <div class="test-content">示例文字</div>
+                            <div id="skew" class="test-content">示例文字</div>
+                        </div>
+                        <div class="content-footer-relative btn-center">
+                            <button class="btn-primary btn" ng-click="skewTestFun('x30')">水平方向(30deg)</button>
+                            <button class="btn-primary btn" ng-click="skewTestFun('x90')">X(90)</button>
+                            <button class="btn-primary btn" ng-click="skewTestFun('y10')">垂直(10deg)</button>
+                            <button class="btn-primary btn" ng-click="skewTestFun('y90')">Y(90)</button>
+                            <button class="btn-primary btn" ng-click="skewTestFun('xy')">(30,10)</button>
+                            <button class="btn-primary btn" ng-click="skewTestFun('init')">初始化</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section class="content-space">
+            <header>
+                <h2>指定基点(transform-origin) 以及 同时使用多种变形</h2>
+                <aside>
+                    使用说明：transform-origin:x y; transform:rotate(angle) scale(sx,sy) skew(angle,angle) translate(x,y)
+                </aside>
+            </header>
+            <div class="main-space">
+                <section class="left-space">
+                    <header>
+                        <h3>属性值说明:</h3>
+                    </header>
+                    <div class="content-scroll">
+                        <span class="importance-content">
+                            指定基点：
+                        </span>
+                        transform-origin:(x,y)-->所有变形方式的默认基点其
+                        &nbsp; &nbsp; &nbsp; &nbsp;中心位置
+                        <ol>
+                            <li>
+                                属性值说明:<br>其中X和Y的值可以是百分值,em,px，
+                                其中X也可以是字符参数值left,center,right；
+                                Y和X一样除了百分值外还可以设置字符值top,center,bottom.
+                            </li>
+                        </ol>
+                        <span class="importance-content">
+                            同时使用多种变形：
+                        </span>
+                        transform:rotate(angle) translate(x,y)
+                        &nbsp; &nbsp; &nbsp; &nbsp; scale(sx,sy) skew(angle,angle)
+                        <ol>
+                            <span class="importance-content">注意:</span>
+                            <li>
+                                transform中使用多个属性时却需要有空格隔开。
+                                大家记住了是空格隔开。
+                            </li>
+                            <span class="importance-content">
+                                例如：
+                                transform:rotate(40deg) translate(20px,50px) scale(1.5,2) skew(40deg,20deg);
+                            </span>
+                        </ol>
+                    </div>
+                </section>
+                <section class="right-space">
+                    <header>
+                        <h3>指定基点、多种变形一起使用练习:</h3>
+                    </header>
+                    <div class="test five-test">
+                        <div class="test-content-space">
+                            <div class="test-content">示例文字</div>
+                            <div id="origin" class="test-content">
+                                <p id="content">示例文字</p>
+                            </div>
+                        </div>
+                        <div class="content-footer-relative btn-center">
+                            <button class="btn-primary btn" ng-click="transformTestFun('center')">基点(中心点)</button>
+                            <button class="btn-primary btn" ng-click="transformTestFun('leftTop')">左上</button>
+                            <button class="btn-primary btn" ng-click="transformTestFun('xy')">坐标</button>
+                            <button class="btn-primary btn" ng-click="transformTestFun('bottomCenter')">下中</button>
+                            <button class="btn-primary btn" ng-click="transformTestFun('')"></button>
+                            <button class="btn-primary btn" ng-click="transformTestFun('x90y90')">(90,90)</button>
+                            <button class="btn-primary btn" ng-click="transformTestFun('init')">初始化</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </div>
+
+</section>
+
+</body>
+</html>

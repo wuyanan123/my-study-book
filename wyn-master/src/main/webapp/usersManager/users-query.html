@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="usersApp">
+<head>
+    <meta charset="UTF-8">
+    <title>用户查询</title>
+    <link rel="stylesheet" href="../common/styles/my-common.css">
+    <link rel="stylesheet" href="styles/users.css">
+</head>
+<body ng-controller="usersQueryController" class="body-height" ng-cloak>
+    <section class="users-query-index">
+        <header>
+            <h1 class="my-title">用户信息查询</h1>
+        </header>
+        <div class="table-grid">
+            <table class="table">
+                <colgroup>
+                    <col class="head-td"/>
+                    <col class="head-td"/>
+                    <col class="head-td"/>
+                    <col class="head-td"/>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>姓名</th>
+                        <th>性别</th>
+                        <th>年齡</th>
+                        <th>电话</th>
+                        <th>身高</th>
+                    </tr>
+                </thead>
+            </table>
+            <div class="table-body" style="height:200px;">
+                <table class="table table-striped table-hover">
+                    <colgroup>
+                        <col class="head-td"/>
+                        <col class="head-td"/>
+                        <col class="head-td"/>
+                        <col class="head-td"/>
+                    </colgroup>
+                    <tbody>
+                    <tr ng-repeat="data in dataList">
+                        <td>{{data.name}}</td>
+                        <td>{{data.sex}}</td>
+                        <td>{{data.age}}</td>
+                        <td>{{data.call}}</td>
+                        <td>{{data.height}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <section>
+            <header class="my-title">
+                <h1>用户信息新增</h1>
+            </header>
+            <div class="form-item">
+                <div class="control-group label-two">
+                    <label class="control-label">姓名</label>
+                    <div class="controls">
+                        <input type="text" class="input-small">
+                    </div>
+                </div>
+                <div class="control-group label-two">
+                    <label class="control-label">性别</label>
+                    <div class="controls">
+                        <input type="text" class="input-medium">
+                    </div>
+                </div>
+                <div class="control-group label-two">
+                    <label class="control-label">地址</label>
+                    <div class="controls">
+                        <input type="text" class="input-large">
+                    </div>
+                </div>
+                <div class="control-group label-three">
+                    <label class="control-label">性别</label>
+                    <div class="controls">
+                        <input type="text" class="input-medium">
+                    </div>
+                </div>
+                <div class="control-group label-three">
+                    <label class="control-label">地址</label>
+                    <div class="controls">
+                        <input type="text" class="input-large">
+                    </div>
+                </div>
+                <div class="control-group label-two">
+                    <label class="control-label">地址</label>
+                    <div class="controls">
+                        <input type="text" class="input-large">
+                    </div>
+                </div>
+                <div class="control-group label-two">
+                    <label class="control-label">地址</label>
+                    <div class="controls">
+                        <input type="text" class="input-large">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-item">
+                <div class="control-group label-two">
+                    <label class="control-label">年齡:</label>
+                    <div class="controls">
+                        <span class="sp-medium">副科级爱国</span>
+                    </div>
+                </div>
+                <div class="control-group label-two">
+                    <label class="control-label">年齡:</label>
+                    <div class="controls">
+                        <span class="sp-medium">dsjsdf</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+<script src="../common/javascript/jquery.js"></script>
+<script src="../common/javascript/angular.js"></script>
+<script src="../common/javascript/ng-grid.js"></script>
+<script src="users-app.js"></script>
+<script src="javascript/users-query-controller.js"></script>
+</body>
+</html>
