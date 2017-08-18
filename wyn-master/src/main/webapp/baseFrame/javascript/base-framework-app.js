@@ -9,9 +9,9 @@ baseFrameworkApp.factory("menuLists",function(){
             {subMenuName:"css3",url:"../noteCode/css3Code/css3-code-index.html"},
             {subMenuName:"html5",url:"../usersManager/users-edit.html"}
         ]},
-        {menuName:"自定义组件",subMenuList:[
-            {subMenuName:"分页指令",url:""},
-            {subMenuName:"用户信息修改2",url:""}
+        {menuName:"作品集",subMenuList:[
+            {subMenuName:"分页指令",url:"../sampleReels/pageInstruction/page-instruction-index.html"},
+            {subMenuName:"视频采集",url:""}
         ]},
         {menuName:"练习实例",subMenuList:[
             {subMenuName:"第一个示例",url:"../usersManager/users-query.html"},

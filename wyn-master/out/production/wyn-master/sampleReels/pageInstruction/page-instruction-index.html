@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="indexApp">
+<head>
+    <meta charset="UTF-8">
+    <title>分页指令编写</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index-conmon.css">
+    <link rel="stylesheet" href="css/page-instruction-index.css">
+</head>
+<body ng-controller="indexController" class="index-test">
+<div class="table-responsive content-body">
+   <table class="table table-bordered table-striped table-condensed table-hover">
+       <thead>
+            <tr>
+                <th>标识码</th>
+                <th>商品名</th>
+                <th>单价</th>
+                <th>数量</th>
+            </tr>
+       </thead>
+       <tbody class="">
+            <tr ng-repeat="product in productList">
+                <td>{{product.code}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.total}}</td>
+            </tr>
+       </tbody>
+   </table>
+</div>
+<!--<div style="height:100px;border:1px solid silver;">-->
+    <!--<div ng-include="'template/page-template.html'"></div>-->
+<!--</div>-->
+<div>
+    <div wyn-page options="pageConfig" onPageChanged="changePageFun"></div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/angular.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/index-app.js"></script>
+<script src="js/page-instruction-index.js"></script>
+</body>
+</html>

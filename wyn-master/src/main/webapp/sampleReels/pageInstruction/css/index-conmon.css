@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+}
+h1,h2,h3,h4,h5,h6{
+    margin-top:5px;
+    margin-bottom: 5px;
+}
+body{
+    min-width: 1024px;
+}
+.index-test .main{
+    display: flex;
+    flex-flow:row wrap ;
+    border: 1px solid silver;
+    justify-content: space-between;
+    height:600px;
+}
+.index-test .main .main-child{
+    width:370px;
+    height:300px;
+    border: 1px solid silver;
+}
+.index-test .main .main-one{
+    width:350px;
+    height:300px;
+    border: 1px solid silver;
+}
+.index-test .main .main-two{
+    width:350px;
+    height:300px;
+    border: 1px solid silver;
+}
+.index-test .main .main-three{
+    width:400px;
+    height:300px;
+    border: 1px solid silver;
+}
+.index-test .main .main-four{
+    width:400px;
+    height:300px;
+    border: 1px solid silver;
+}
+.index-test .main-content{
+    border:1px solid silver;
+    height:264px;
+    overflow: hidden;
+    overflow: auto;
+}
+

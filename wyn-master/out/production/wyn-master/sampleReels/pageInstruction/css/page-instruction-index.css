@@ -1,0 +1,21 @@
+.accordion .title{
+    border: 1px solid silver;
+    background-color: black;
+    coolor:white;
+}
+.accordion .content{
+
+}
+.panel{
+    margin-bottom: 0px;
+}
+
+.index-test .content-body{
+    border:1px solid silver;
+    height:300px;
+}
+
+select option{
+    border: 1px solid silver;
+}
+
